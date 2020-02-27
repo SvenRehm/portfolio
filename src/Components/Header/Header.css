@@ -1,0 +1,124 @@
+.logo {
+   position: fixed;
+   text-decoration: none;
+   color: white;
+   background: #2a373a;
+   font-size: 1.4em;
+   padding: 0.3em 0.4em 0.3em 0.4em;
+   font-family: "Poppins", sans-serif;
+   z-index: 8;
+}
+.logo span {
+   color: #00ddff;
+}
+
+.header .header-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 90%;
+   padding: 0 120px;
+   margin: 70px auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 8;
+}
+
+button,
+input[type="button"] {
+   border: none;
+   border-radius: 0;
+   background: transparent;
+   color: black;
+   cursor: pointer;
+   display: inline-block;
+   padding: 1em 1.5em;
+   text-transform: uppercase;
+   transition: all 0.25s ease-in-out;
+   position: relative;
+   z-index: 8;
+}
+
+.nav-toggle {
+   font-size: 0.875em;
+   padding: 1em;
+   background-color: transparent;
+}
+
+button:focus {
+   outline: 0;
+}
+
+button:hover {
+   color: #696868;
+}
+
+.icon {
+   display: inline-block;
+   fill: currentColor;
+   height: 1em;
+   width: 1em;
+   vertical-align: middle;
+   position: relative;
+   top: -0.0625em;
+   z-index: 8;
+}
+
+/* Menu toggle styles. */
+.icon-nav-toggle {
+   width: 2em;
+   height: 2em;
+   top: 0;
+}
+
+/* Animate menu icon (lines). */
+.svg-nav-toggle .line {
+   opacity: 1;
+   transform: rotate(0) translateY(0) translateX(0);
+   transform-origin: 1em 1em;
+   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.svg-nav-toggle .line-1 {
+   transform-origin: 1em 2.5em;
+}
+
+.svg-nav-toggle .line-3 {
+   transform-origin: 1em 4.5em;
+}
+
+.nav-toggle.opened .svg-nav-toggle .line-1 {
+   transform: rotate(45deg) translateY(0) translateX(0);
+}
+
+.nav-toggle.opened .svg-nav-toggle .line-2 {
+   opacity: 0;
+}
+
+.nav-toggle.opened .svg-nav-toggle .line-3 {
+   transform: rotate(-45deg) translateY(0em) translateX(0em);
+}
+
+@media (max-width: 1024px) {
+   .container .header .header-container {
+      padding: 0 80px;
+   }
+}
+
+@media (min-width: 380px) {
+   .container .header .header-container {
+      padding: 0 35px;
+      margin: 20px auto;
+   }
+   .grid .img-card-text {
+      top: 65%;
+   }
+   .grid .img-card-text a {
+      font-size: 1.8em;
+      opacity: 1;
+   }
+   .grid .img-card-text a.desctiption-link {
+      font-size: 0.8em;
+   }
+}

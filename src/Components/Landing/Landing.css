@@ -1,0 +1,301 @@
+.landing {
+   display: grid;
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   grid-template-rows: repeat(12, minmax(0, 1fr));
+   opacity: 1;
+   animation-name: fadeInLanding;
+   animation-duration: 650ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.landing.fadeout-landing {
+   animation-name: fadeOutLanding;
+   animation-duration: 650ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.landing.blur-landing {
+   animation-name: fadeOutBlur;
+   animation-duration: 650ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+.landing .fullwidth-wrapper {
+   height: 100vh;
+   grid-row: 1/ -1;
+   grid-column: 1/-1;
+   display: grid;
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   grid-template-rows: repeat(12, minmax(0, 1fr));
+   justify-content: center;
+   align-items: end;
+}
+
+/* .landing .fullwidth-wrapper .background-dark {
+   width: 100%;
+   height: 100%;
+   grid-column: 1 / -1;
+   grid-row: 1 / span 6;
+   background: white; 
+} */
+/* .landing .fullwidth-wrapper .background-light {
+    width: 100%;
+   height: 100%;
+   grid-column: 1 / -1;
+   grid-row: 7 / span 6;
+   background: #262626; 
+} */
+/* .landing .fullwidth-wrapper .landing-headings {
+   grid-column: 3 / span 8;
+   grid-row: 2 / span 6;
+   text-align: center;
+   color: white;
+   font-family: "Poppins", sans-serif;
+   border: solid 1px black;
+
+   background-color: #272727;
+   background-image: url("../../images/simple-dashed.png");
+   background-size: 25px;
+}
+.landing .fullwidth-wrapper .call-to-action {
+   grid-column: 3 / span 8;
+   grid-row: 8 / span 2;
+   justify-self: center;
+} */
+
+.landing .fullwidth-wrapper .landing-headings {
+   grid-column: 3 / span 8;
+   grid-row: 4 / span 7;
+   text-align: center;
+   color: white;
+   font-family: "Poppins", sans-serif;
+   border: solid 1px black;
+   height: 100%;
+   background-color: #272727;
+   background-image: url("../../images/simple-dashed.png");
+   background-size: 25px;
+}
+.landing .fullwidth-wrapper .call-to-action {
+   grid-column: 3 / span 8;
+   grid-row: 8 / span 2;
+   justify-self: center;
+}
+
+.landing h1 {
+   font-weight: 300;
+   margin: 0;
+   margin-top: 14vh;
+   font-size: 4.5em;
+   letter-spacing: 5px;
+   font-family: "Poppins", sans-serif;
+   /* color: #383838; */
+   color: #f7f8fa;
+   text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+   text-transform: uppercase;
+}
+
+.landing h1:after {
+   content: "";
+   display: block;
+   margin: 0 auto;
+   width: 50%;
+   padding-top: 20px;
+   border-bottom: 1px solid #f7f8fa;
+}
+.landing h1::selection {
+   color: white;
+   background: #383838;
+}
+.landing h3 {
+   /* color: #f7f8fa; */
+   color: rgba(255, 255, 255, 0.4);
+   margin: 30px 70px 0 70px;
+   font-size: 1.4em;
+   font-family: "Poppins", sans-serif;
+   font-weight: 300;
+   text-shadow: 2px 1px 4px #2a373a;
+}
+.landing h3::selection {
+   color: #383838;
+   background: white;
+}
+.landing .btn {
+   display: inline-block;
+   color: rgba(22, 22, 22, 0.95);
+   text-decoration: none;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   background: #c0a426;
+   /* width: 700px; */
+
+   font-size: 1em;
+   border: 1px solid rgba(22, 22, 22, 0.95);
+   padding: 15px 50px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+   margin: 5em 2em 0em 2em;
+
+   text-transform: uppercase;
+   transition: all 250ms ease-in-out;
+}
+
+.landing .btn:hover {
+   background: rgba(22, 22, 22, 0.95);
+   color: #30c9e8;
+   border: 1px solid #30c9e8;
+}
+.landing p {
+   margin-left: -55px;
+}
+.landing p::selection {
+   color: #383838;
+   background: white;
+}
+.landing .landing-down-arrow svg {
+   display: block;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 1%;
+   text-align: center;
+   width: 40px;
+   animation: pulse 1.5s infinite;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+   }
+   70% {
+      transform: scale(1);
+      opacity: 1;
+   }
+   100% {
+      transform: scale(0.8);
+      opacity: 0.8;
+   }
+}
+
+@keyframes fadeInLanding {
+   0% {
+      opacity: 0;
+      transform: scale(0.95);
+   }
+   100% {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+@keyframes fadeOutLanding {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   100% {
+      opacity: 0;
+      transform: scale(0.95);
+   }
+}
+
+@keyframes fadeOutBlur {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   100% {
+      opacity: 1;
+      transform: scale(0.95);
+   }
+}
+@media (max-width: 1234px) {
+   .landing .landing {
+      display: grid;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings {
+      grid-row: 3 / span 6;
+      margin-bottom: 1.5em;
+   }
+   .landing .landing .fullwidth-wrapper .call-to-action {
+      grid-column: 3 / span 8;
+      grid-row: 9 / span 2;
+      margin-bottom: 1.5em;
+   }
+}
+@media (max-width: 1234px) {
+   .landing .landing {
+      display: grid;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings {
+      grid-row: 3 / span 6;
+      margin-bottom: 1.5em;
+   }
+   .landing .landing .fullwidth-wrapper .call-to-action {
+      grid-column: 3 / span 8;
+      grid-row: 9 / span 2;
+      margin-bottom: 1.5em;
+   }
+}
+@media (max-width: 1024px) {
+   .landing .landing {
+      display: grid;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings {
+      grid-row: 3 / span 6;
+      margin-bottom: 1.5em;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings h3 {
+      font-size: 1.2em;
+   }
+   .landing .landing .fullwidth-wrapper .call-to-action {
+      grid-column: 3 / span 8;
+      grid-row: 9 / span 2;
+      margin-bottom: 1.5em;
+   }
+}
+@media (max-width: 376px) {
+   .landing .landing {
+      display: grid;
+   }
+   .landing .landing .fullwidth-wrapper {
+      background-position: 0 55%;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings {
+      grid-column: 2 / span 10;
+      grid-row: 5 / span 5;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings h1 {
+      font-size: 2.4em;
+      margin-bottom: 2em;
+   }
+   .landing .landing .fullwidth-wrapper .landing-headings h3 {
+      font-size: 1em;
+      margin: 0 0 1em 0;
+   }
+   .landing .landing .fullwidth-wrapper .call-to-action {
+      grid-column: 3 / span 8;
+      grid-row: 9 / span 4;
+      display: grid;
+   }
+   .landing .landing .fullwidth-wrapper .call-to-action .btn {
+      font-size: 0.5;
+      padding: 10px 35px;
+      margin: 1.1em 0 0.5em 0;
+      width: 150px;
+   }
+}
+
+@keyframes fadeOutBlur {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   100% {
+      opacity: 1;
+      transform: scale(0.95);
+   }
+}

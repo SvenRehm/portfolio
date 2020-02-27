@@ -1,0 +1,212 @@
+.footer {
+   display: grid;
+   height: 100vh;
+   justify-self: center;
+   align-items: end;
+   opacity: 1;
+   font-family: "Roboto", sans-serif;
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   grid-template-rows: repeat(12, minmax(0, 1fr));
+   animation-name: footerslidein;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.footer.hide {
+   display: grid;
+   animation-name: footerslideout;
+   animation-duration: 500ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.footer .downarrow {
+   position: fixed;
+   right: 9%;
+   bottom: 7%;
+}
+.footer .uparrow {
+   position: fixed;
+   right: 9%;
+   bottom: 7%;
+   border-bottom: 1px solid black;
+}
+.footer h5 {
+   grid-row: 4 / span 1;
+   grid-column: 1/-1;
+   text-align: center;
+   font-weight: 300;
+   font-size: 2em;
+   color: rgba(119, 119, 119, 0.95);
+}
+.footer h5::selection {
+   color: white;
+   background: #383838;
+}
+.footer h2 {
+   grid-row: 6 / span 1;
+   grid-column: 4 / span 6;
+   text-align: center;
+}
+.footer h2::selection {
+   color: white;
+   background: #383838;
+}
+.footer h4 {
+   grid-row: 11 / span 1;
+   grid-column: 4 / span 6;
+   text-align: center;
+}
+.footer h4::selection {
+   color: white;
+   background: #383838;
+}
+.footer .btn-footer,
+.footer .btn-footer2 {
+   text-align: center;
+   color: rgba(22, 22, 22, 0.95);
+   text-decoration: none;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   background: #30c9e8;
+   font-size: 1em;
+   border: 1px solid rgba(22, 22, 22, 0.95);
+   width: 200px;
+   padding: 15px 50px;
+   transition: all 250ms ease-in-out;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+   font-weight: 400;
+   text-transform: uppercase;
+}
+.footer .btn-footer:hover,
+.footer .btn-footer2:hover {
+   background: rgba(22, 22, 22, 0.95);
+   color: #30c9e8;
+}
+.footer .btn-footer {
+   grid-row: 8 / span 1;
+   grid-column: 5 / span 4;
+   justify-self: center;
+}
+.footer .social-media {
+   grid-row: 10 / span 1;
+   grid-column: 5 / span 4;
+   justify-self: center;
+   list-style: none;
+   font-family: "Roboto", sans-serif;
+}
+.footer .social-media li:first-child {
+   margin-left: 1em;
+}
+.footer .social-media li {
+   float: left;
+   height: 2.5em;
+   width: 40px;
+   margin-right: 1em;
+}
+.footer .social-media a {
+   display: block;
+   width: 100%;
+}
+.footer .social-media svg {
+   height: 2.5em;
+}
+.footer .social-media #twitters:hover #twitter {
+   fill: #30c9e8;
+   transition: all 250ms ease-in-out;
+}
+.footer .social-media #mails:hover #mail {
+   fill: #30c9e8;
+   transition: all 250ms ease-in-out;
+}
+.footer .social-media #linkedins:hover #linkedin {
+   fill: #30c9e8;
+   transition: all 250ms ease-in-out;
+}
+.footer .social-media #githubs:hover #github {
+   fill: #30c9e8;
+   transition: all 250ms ease-in-out;
+}
+
+@keyframes footerslidein {
+   0% {
+      transform: translateY(30%);
+      opacity: 0;
+   }
+   50% {
+      opacity: 0.2;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes footerslideout {
+   0% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(0%);
+      opacity: 0;
+   }
+}
+
+@keyframes socialicons {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@media (max-width: 1027px) {
+   .footer h5 {
+      margin-bottom: 2.5em;
+   }
+   .footer h2 {
+      font-size: 1.3em;
+   }
+   .footer .btn-footer {
+      margin-left: 6em;
+      grid-column: 4 / span 2;
+   }
+   .footer .btn-footer2 {
+      grid-row: 8 / span 1;
+      margin-left: 6em;
+   }
+}
+
+@media (max-width: 376px) {
+   .footer h5 {
+      grid-row: 4 / span 1;
+      margin-bottom: 3.6em;
+   }
+   .footer h2 {
+      grid-row: 6 / span 1;
+      grid-column: 2 / span 10;
+      font-size: 1.3em;
+   }
+   .footer .btn-footer {
+      grid-row: 8 / span 1;
+      grid-column: 6 / span 2;
+      margin: 0 0 1.5em 0;
+      padding: 12px 30px;
+   }
+   .footer .btn-footer2 {
+      grid-row: 9 / span 1;
+      grid-column: 6 / span 2;
+      padding: 12px 30px;
+      margin: 0;
+   }
+   .footer h4 {
+      grid-row: 12 / span 1;
+      margin-bottom: 1em;
+   }
+   .footer .social-media {
+      grid-row: 11 / span 1;
+      grid-column: 4 / span 7;
+      margin-bottom: 0.5em;
+   }
+}

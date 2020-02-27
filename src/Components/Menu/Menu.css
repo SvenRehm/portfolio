@@ -1,0 +1,122 @@
+.menu-overlay {
+   display: none;
+}
+ul.menu-list {
+   padding: 0;
+}
+.menu-overlay.closed {
+   height: 100vh;
+   width: 100vw;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 7;
+   display: grid;
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   grid-template-rows: repeat(12, minmax(0, 1fr));
+}
+.menu-overlay .menu-all {
+   grid-row: 1/ -1;
+   grid-column: 4 / span 6;
+   margin: auto auto;
+}
+.menu-overlay .menu-all ul:hover li {
+   opacity: 0.5;
+}
+.menu-overlay .menu-all ul li:hover {
+   opacity: 1;
+}
+.menu-overlay .menu-all ul {
+   list-style: none;
+   width: 100%;
+   margin: auto auto;
+}
+.menu-overlay .menu-all ul li,
+.menu-overlay .menu-all ul a {
+   text-transform: uppercase;
+   line-height: 60px;
+   font-size: 54px;
+   text-decoration: none;
+   color: black;
+   text-align: center;
+   margin-bottom: 0.3em;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   transition: all 150ms ease-in-out;
+}
+.menu-overlay .menu-all ul li::selection,
+.menu-overlay .menu-all ul a::selection {
+   color: white;
+   background: #383838;
+}
+.menu-overlay .menu-all ul li:hover,
+.menu-overlay .menu-all ul a:hover {
+   color: #696868;
+}
+.menu-overlay .menu-all ul li,
+.menu-overlay .menu-all ul a > .list-showing {
+   opacity: 0;
+}
+.menu-overlay .menu-all ul li:nth-child(1),
+.menu-overlay .menu-all ul a > .list-showing:nth-child(1) {
+   animation-name: fadeInLi;
+   animation-duration: 450ms;
+   animation-delay: 100ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.menu-overlay .menu-all ul li:nth-child(2),
+.menu-overlay .menu-all ul a > .list-showing:nth-child(2) {
+   animation-name: fadeInLi;
+   animation-duration: 450ms;
+   animation-delay: 200ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.menu-overlay .menu-all ul li:nth-child(3),
+.menu-overlay .menu-all ul a > .list-showing:nth-child(3) {
+   animation-name: fadeInLi;
+   animation-duration: 450ms;
+   animation-delay: 300ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+.menu-overlay .menu-all ul li:nth-child(4),
+.menu-overlay .menu-all ul a > .list-showing:nth-child(4) {
+   animation-name: fadeInLi;
+   animation-duration: 450ms;
+   animation-delay: 400ms;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+@media (max-width: 376px) {
+   .menu-overlay .menu-all ul {
+      list-style: none;
+      width: 100%;
+      margin: auto auto;
+   }
+   .menu-overlay .menu-all ul li,
+   .menu-overlay .menu-all ul a {
+      text-transform: uppercase;
+      line-height: 50px;
+      font-size: 1.5em;
+      margin-bottom: 0.3em;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+   }
+}
+
+@keyframes fadeInLi {
+   0% {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   50% {
+      opacity: 0.1;
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
