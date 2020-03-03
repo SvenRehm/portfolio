@@ -51,7 +51,7 @@ export class Sections extends Component {
                            href={codelink}
                            onClick={() => window.open(codelink, "_blank")}
                         >
-                           View COde
+                           View Code
                         </a>
                      </div>
                      <img alt={"projectimage"} src={picture} />

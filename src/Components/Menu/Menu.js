@@ -8,11 +8,11 @@ export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
             <ul className="menu-list">
                <li className="menu-item-1">
                   <a
-                     href="#home"
+                     href="/"
                      className="vs-anchor"
-                     onClick={() => {
+                     onClick={event => {
                         closeMenu()
-
+                        event.preventDefault()
                         goToPage(0)
                      }}
                   >
@@ -21,9 +21,10 @@ export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
                </li>
                <li className="menu-item-2">
                   <a
-                     href="#portfolio"
+                     href="/"
                      className="vs-anchor"
-                     onClick={() => {
+                     onClick={event => {
+                        event.preventDefault()
                         closeMenu()
                         goToPage(1)
                      }}

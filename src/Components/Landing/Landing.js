@@ -66,8 +66,9 @@ export const Landing = ({
             </a> */}
             <a
                className="landing-down-arrow vs-anchor"
-               href="#portfolio"
-               onClick={() => {
+               href="/"
+               onClick={event => {
+                  event.preventDefault()
                   goToPage(1)
                }}
             >

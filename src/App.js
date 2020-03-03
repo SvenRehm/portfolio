@@ -4,7 +4,7 @@ import "./App.css"
 import { Header } from "./Components/Header/Header"
 import { Landing } from "./Components/Landing/Landing"
 import { Sections } from "./Components/Section/Section"
-import { Footer } from "./Components/Footer/Footer"
+// import { Footer } from "./Components/Footer/Footer"
 import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import "react-image-lightbox/style.css"
@@ -19,7 +19,8 @@ export class App extends Component {
       this.state = {
          menu: false,
          contact: false,
-         arrowhide: false
+         arrowhide: false,
+         activePage: 0
       }
    }
 
@@ -44,9 +45,15 @@ export class App extends Component {
    }
 
    disableDownArrow = e => {
-      e === 2
-         ? this.setState({ arrowhide: true })
-         : this.setState({ arrowhide: false })
+      // e === 2
+      //    ? this.setState({ arrowhide: true })
+      //    : this.setState({ arrowhide: false })
+
+      if (e >= 2) {
+         this.setState({ arrowhide: true })
+      } else {
+         this.setState({ arrowhide: false })
+      }
    }
 
    render() {
@@ -54,7 +61,6 @@ export class App extends Component {
          animationTimer: 900,
          pageOnChange: this.disableDownArrow
       }
-      console.log(this.state.arrowhide)
 
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
@@ -64,7 +70,12 @@ export class App extends Component {
                   <line x1="80%" y1="100%" x2="20%" y2="0" />
                </svg>
             </div>
-            <Header menu={this.state.menu} toggleMenu={this.toggleMenu} />
+            <Header
+               menu={this.state.menu}
+               toggleMenu={this.toggleMenu}
+               arrowhide={this.state.arrowhide}
+               goToPage={this.goToPage}
+            />
             <Menu
                menu={this.state.menu}
                toggleContact={this.toggleContact}
