@@ -26,8 +26,8 @@
 }
 .grid .img-card-text {
    position: absolute;
-   top: 25px;
-   left: 45%;
+   top: 20px;
+   left: 40%;
    font-family: "Roboto", sans-serif;
    z-index: 6;
    text-align: center;
@@ -49,6 +49,7 @@
    opacity: 1;
    margin: 0;
    text-align: start;
+   letter-spacing: 1px;
 }
 
 .grid h2 {
@@ -66,7 +67,7 @@
 }
 .grid .img-card-text h3.desctiption-link {
    display: block;
-   margin-top: 0.7em;
+   margin-top: 1em;
    margin-bottom: 3em;
    font-weight: 100;
    font-size: 1em;
@@ -89,21 +90,35 @@
    animation-fill-mode: forwards;
    box-shadow: 0px 33px 40px -15px #272727;
 }
+
+.grid .viewbuttons {
+   position: absolute;
+   /* top: 50px;
+   left: 50px; */
+   top: 20px;
+   left: 20px;
+
+   height: 100px;
+   background: rgba(22, 22, 22, 0.705);
+   z-index: 7;
+   width: 35%;
+}
 .grid .viewdemo {
    position: absolute;
-   top: 50px;
-   left: 50px;
-
+   top: 50%;
+   left: 30%;
+   transform: translate(-50%, -50%);
    color: rgba(22, 22, 22, 0.95);
    text-decoration: none;
    font-family: "Roboto", sans-serif;
 
-   background: #30c9e8;
+   /* background: #30c9e8; */
+   background: #c0a426;
    z-index: 7;
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
    border: 1px solid rgba(22, 22, 22, 0.95);
    font-weight: 400;
-   padding: 0.8em;
+   padding: 0.8em 1.3em 0.8em 1.3em;
    font-size: 0.9em;
    text-transform: uppercase;
    transition: all 250ms ease-in-out;
@@ -118,33 +133,40 @@
 
 .grid .viewdemo:hover {
    background: rgba(22, 22, 22, 0.95);
-   color: #30c9e8;
-   border: 1px solid #30c9e8;
+   /* color: #30c9e8;
+   border: 1px solid #30c9e8; */
+   color: #c0a426;
+   border: 1px solid #c0a426;
 }
 
 .grid .viewcode {
    position: absolute;
-   top: 50px;
-   left: 15%;
+   top: 50%;
+   left: 70%;
+
+   transform: translate(-50%, -50%);
    z-index: 7;
-   padding: 0.8em;
+   padding: 0.8em 1.3em 0.8em 1.3em;
    font-size: 0.9em;
    color: rgba(22, 22, 22, 0.95);
    text-decoration: none;
    font-family: "Roboto", sans-serif;
    font-weight: 400;
-   background: #30c9e8;
-
+   /* background: #30c9e8; */
+   background: #c0a426;
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
    border: 1px solid rgba(22, 22, 22, 0.95);
    font-weight: 400;
    text-transform: uppercase;
    transition: all 250ms ease-in-out;
 }
+
 .grid .viewcode:hover {
    background: rgba(22, 22, 22, 0.95);
-   color: #30c9e8;
-   border: 1px solid #30c9e8;
+   /* color: #30c9e8;
+   border: 1px solid #30c9e8; */
+   color: #c0a426;
+   border: 1px solid #c0a426;
 }
 
 .grid .img-card.img-slideup {
@@ -163,29 +185,30 @@
     height: 90%;
        width: 40%;*/
    object-fit: cover;
-   width: 40%;
+   object-position: 0% 0%;
+   width: 35%;
    height: 93%;
    transition: all 200ms ease-in-out;
    box-shadow: 14px 21px 43px -12px rgba(0, 0, 0, 0.68);
 }
 
 .grid p {
-   width: 500px;
+   width: 550px;
    text-align: start;
    color: rgba(255, 255, 255, 0.4);
-   border-right: solid 1px rgba(255, 255, 255, 0.4);
+   border-right: solid 1px rgba(0, 0, 0, 0.4);
 }
 
 .grid h4 {
    position: absolute;
    margin: 0;
    right: 0;
-   top: 110px;
+   top: 30%;
    text-decoration: none;
    color: rgb(219, 219, 219);
    font-size: 1.5em;
    opacity: 1;
-   width: 180px;
+   width: 200px;
    text-align: center;
 }
 
@@ -197,11 +220,11 @@
    /* width: 200px;
    right: 10px;
    top: 200px; */
-   width: 180px;
+   width: 200px;
    height: 100%;
-   top: 30px;
+
    right: 0;
-   top: 35%;
+   top: 45%;
    margin: 0;
    text-decoration: none;
    color: rgb(219, 219, 219);
@@ -214,7 +237,7 @@
    padding-right: 10px;
    list-style: square;
    padding-left: 15px;
-   width: 500px;
+   width: 550px;
 
    text-align: start;
    font-size: 1em;
@@ -222,7 +245,7 @@
    border-right: solid 1px rgba(255, 255, 255, 0.4);
 }
 .grid .projectBulllets li {
-   margin: 0.5em 0 0.5em 0;
+   margin: 0.7em 0 0.7em 0;
 }
 
 .grid .skills li {
@@ -234,6 +257,7 @@
    width: 100%;
    height: 100%;
 }
+
 @keyframes imgSlideUp {
    0% {
       transform: translateY(0);

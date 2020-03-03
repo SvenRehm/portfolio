@@ -141,8 +141,10 @@
 
 .landing .btn:hover {
    background: rgba(22, 22, 22, 0.95);
-   color: #30c9e8;
-   border: 1px solid #30c9e8;
+   /* color: #30c9e8;
+   border: 1px solid #30c9e8; */
+   color: #c0a426;
+   border: 1px solid #c0a426;
 }
 .landing p {
    margin-left: -55px;
@@ -159,10 +161,18 @@
    bottom: 1%;
    text-align: center;
    width: 40px;
-   animation: pulse 1.5s infinite;
+   /* animation: pulse 1.5s infinite; */
    left: 0;
    right: 0;
    margin: auto;
+   opacity: 1;
+   transition: 100ms ease-in-out;
+}
+
+.landing .landing-down-arrow .arrowhide {
+   opacity: 0;
+   /* display: none; */
+   transition: 100ms ease-in-out;
 }
 
 @keyframes pulse {

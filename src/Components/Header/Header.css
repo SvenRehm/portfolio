@@ -11,6 +11,13 @@
 .logo span {
    color: #00ddff;
 }
+.uparrow {
+   position: fixed;
+   right: 85px;
+   bottom: 25px;
+   border-bottom: 1px solid black;
+   z-index: 8;
+}
 
 .header .header-container {
    position: fixed;

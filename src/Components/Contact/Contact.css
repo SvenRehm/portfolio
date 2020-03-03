@@ -131,16 +131,23 @@
    font-weight: 400;
    font-family: "Roboto", sans-serif;
    font-size: 1em;
+   text-transform: uppercase;
    padding: 0.7em;
-   background: #30c9e8;
+   /* background: #30c9e8; */
+   background: #c0a426;
    color: rgba(22, 22, 22, 0.95);
    transition: all 180ms ease-in-out;
 }
 .contact-left form .form-button:hover {
-   border: 1px solid #30c9e8;
+   /* border: 1px solid #30c9e8; */
+   border: 1px solid #c0a426;
+
    outline: none;
    background: rgba(22, 22, 22, 0.95);
-   color: #30c9e8;
+   /* color: #30c9e8; */
+
+   cursor: pointer;
+   color: #c0a426;
    text-shadow: 1px 1px 4px rgba(22, 22, 22, 0.95);
 }
 
@@ -162,15 +169,18 @@
 }
 .contact-right-wrapper .contact-right {
    display: grid;
+   height: 100vh;
    grid-template-columns: repeat(12, minmax(0, 1fr));
    grid-template-rows: repeat(12, minmax(0, 1fr));
    justify-self: center;
-   align-items: end;
+   /* align-items: end; */
 }
+
 .contact-right-wrapper .contact-right .content-contact-right {
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: "Roboto", sans-serif;
    grid-column: 3 / span 9;
-   grid-row: 4 / span 11;
+   grid-row: 3 / span 4;
+   margin-right: 1em;
 }
 .contact-right-wrapper .contact-right .content-contact-right h1 {
    letter-spacing: 2px;
@@ -187,9 +197,9 @@
 }
 .contact-right-wrapper .contact-right .content-contact-right h2 {
    font-family: "Roboto", sans-serif;
-   line-height: 1.2em;
+   line-height: 1em;
 
-   margin-bottom: 50px;
+   margin-bottom: 10px;
    font-weight: 300;
 }
 .contact-right-wrapper .contact-right .content-contact-right h2::selection {
@@ -197,7 +207,7 @@
    color: white;
 }
 .contact-right-wrapper .contact-right .content-contact-right h4 {
-   margin-bottom: 120px;
+   margin-bottom: 20px;
    margin-top: 0px;
    color: #b6b6b6;
 }
@@ -239,7 +249,8 @@
    ul
    #twitters2:hover
    #twitter2 {
-   fill: #30c9e8;
+   /* fill: #30c9e8; */
+   fill: #c0a426;
    transition: all 250ms ease-in-out;
 }
 .contact-right-wrapper
@@ -248,7 +259,8 @@
    ul
    #mails2:hover
    #mail2 {
-   fill: #30c9e8;
+   /* fill: #30c9e8; */
+   fill: #c0a426;
    transition: all 250ms ease-in-out;
 }
 .contact-right-wrapper
@@ -257,7 +269,8 @@
    ul
    #linkedins2:hover
    #linkedin2 {
-   fill: #30c9e8;
+   /* fill: #30c9e8; */
+   fill: #c0a426;
    transition: all 250ms ease-in-out;
 }
 .contact-right-wrapper
@@ -266,7 +279,8 @@
    ul
    #githubs2:hover
    #github2 {
-   fill: #30c9e8;
+   /* fill: #30c9e8; */
+   fill: #c0a426;
    transition: all 250ms ease-in-out;
 }
 .contact-right-wrapper .close-btn {
@@ -278,6 +292,7 @@
 }
 .contact-right-wrapper .close-btn:hover {
    fill: #696868;
+   opacity: 0.6;
 }
 .contact-right-wrapper .close-btn #close-btn {
    padding: 1em;
@@ -286,6 +301,86 @@
    width: 20px;
 }
 
+div.blueTable {
+   font-family: "Roboto", sans-serif;
+
+   text-align: center;
+   /* margin: 5em auto 0 auto; */
+   /* width: 80%; */
+   grid-column: 3 / span 8;
+   margin-top: 1.5em;
+
+   grid-row: 6 / span 5;
+}
+.divTable.blueTable .divTableCell,
+.divTable.blueTable .divTableHead {
+   /* border: 1px solid #aaaaaa; */
+   font-size: 1.5em;
+   padding: 7px 0px;
+}
+.divTable.blueTable .divTableBody .divTableCell {
+   font-size: 0.9em;
+}
+.divTable.blueTable
+   .divTableHeading
+   .divTable.blueTable
+   .divTableHeading
+   .divTableHead {
+   font-size: 15px;
+   font-weight: bold;
+   text-align: center;
+}
+.blueTable .tableFootStyle {
+   font-size: 14px;
+}
+.blueTable .tableFootStyle .links {
+   text-align: right;
+}
+.blueTable .tableFootStyle .links a {
+   display: inline-block;
+   background: #1c6ea4;
+   color: #ffffff;
+   padding: 4px 8px;
+   border-radius: 5px;
+}
+.blueTable.outerTableFooter {
+   border-top: none;
+}
+.blueTable.outerTableFooter .tableFootStyle {
+   padding: 6px 5px;
+}
+/* DivTable.com */
+.divTable {
+   display: table;
+}
+.divTableRow {
+   display: table-row;
+}
+.divTableHeading {
+   display: table-header-group;
+}
+.divTableCell,
+.divTableHead {
+   display: table-cell;
+   width: 33%;
+}
+.divTableHead:after {
+   content: "";
+   display: block;
+   margin: 0 auto;
+   width: 40%;
+   padding-top: 6px;
+   border-bottom: 1px solid rgb(24, 24, 24);
+}
+.divTableHeading {
+   display: table-header-group;
+}
+.divTableFoot {
+   display: table-footer-group;
+}
+.divTableBody {
+   display: table-row-group;
+}
 @keyframes slide-left {
    0% {
       opacity: 0;

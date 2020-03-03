@@ -25,17 +25,11 @@ export class Sections extends Component {
          <li key={key}>{item}</li>
       ))
 
-      console.log(picture)
       return (
          <div>
-            <div
-               vs-anchor="view-4"
-               className="mainview view-4 page section"
-               id="four"
-            >
+            <div>
                <div className="grid">
                   <div
-                     // className="img-card"
                      className={menu ? "img-card img-slideup" : "img-card"}
                      href="/"
                      onClick={event => {
@@ -43,22 +37,23 @@ export class Sections extends Component {
                         this.setState({ isOpen: true })
                      }}
                   >
-                     <a
-                        onClick={() => window.open(demolink, "_blank")}
-                        className="viewdemo"
-                        href={demolink}
-                     >
-                        View Demo
-                     </a>
+                     <div className="viewbuttons">
+                        <a
+                           onClick={() => window.open(demolink, "_blank")}
+                           className="viewdemo"
+                           href={demolink}
+                        >
+                           View Demo
+                        </a>
 
-                     <a
-                        className="viewcode"
-                        href={codelink}
-                        onClick={() => window.open(codelink, "_blank")}
-                     >
-                        View COde
-                     </a>
-
+                        <a
+                           className="viewcode"
+                           href={codelink}
+                           onClick={() => window.open(codelink, "_blank")}
+                        >
+                           View COde
+                        </a>
+                     </div>
                      <img alt={"projectimage"} src={picture} />
                      <div className="content "></div>
                      <h4>Skills Used</h4>
@@ -71,7 +66,7 @@ export class Sections extends Component {
                         <h1>{headline}</h1>
                         <h3 className="desctiption-link">{description}</h3>
 
-                        <h2>What I have Learned</h2>
+                        <h2>Focus und Ziel der App</h2>
                         <ul className="projectBulllets">{projectBulllets}</ul>
                         {/* <p>{paragraph1}</p> */}
                         {/* <p>

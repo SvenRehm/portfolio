@@ -18,7 +18,8 @@ export class App extends Component {
 
       this.state = {
          menu: false,
-         contact: false
+         contact: false,
+         arrowhide: false
       }
    }
 
@@ -42,10 +43,18 @@ export class App extends Component {
       this.reactPageScroller.goToPage(pageNumber)
    }
 
+   disableDownArrow = e => {
+      e === 2
+         ? this.setState({ arrowhide: true })
+         : this.setState({ arrowhide: false })
+   }
+
    render() {
       let options = {
-         animationTimer: 900
+         animationTimer: 900,
+         pageOnChange: this.disableDownArrow
       }
+      console.log(this.state.arrowhide)
 
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
@@ -76,6 +85,7 @@ export class App extends Component {
                   toggleContact={this.toggleContact}
                   changePage={this.changePage}
                   goToPage={this.goToPage}
+                  arrowhide={this.state.arrowhide}
                />
 
                <Sections
@@ -91,11 +101,11 @@ export class App extends Component {
 
                <Sections menu={this.state.menu} skills={secondSection.skills} />
 
-               <Footer
+               {/* <Footer
                   menu={this.state.menu}
                   toggleContact={this.toggleContact}
                   goToPage={this.goToPage}
-               />
+               /> */}
             </ReactPageScroller>
          </div>
       )

@@ -1,5 +1,6 @@
 import React from "react"
 import "./Contact.css"
+import closeButton from "../../images/close-button.svg"
 
 export const Contact = ({ contact, closeContact }) => {
    return (
@@ -51,7 +52,6 @@ export const Contact = ({ contact, closeContact }) => {
             }
          >
             <div
-               // className="contact-right"
                className={
                   contact ? "contact-right is-open-right" : "contact-right"
                }
@@ -69,7 +69,7 @@ export const Contact = ({ contact, closeContact }) => {
                      >
                         <img
                            className="close-contact-right"
-                           src="images/close-button.svg"
+                           src={closeButton}
                            alt=""
                         ></img>
                      </a>
@@ -79,31 +79,11 @@ export const Contact = ({ contact, closeContact }) => {
                   <h2>About Me</h2>
                   <p>
                      Hello I’m a 26-year-old, Freelance Front end web developer.
-                     One year ago i found my passion in{" "}
+                     One year ago i found my passion in
                      <b>front end devepment</b> and the <b>problem solving</b>{" "}
                      aspect of it, since then my goal has been to learn new
                      technologies and skills so that I can build bigger and
                      better things in the future.
-                  </p>
-                  <p>
-                     The part i appreciate most about front end development is
-                     that i can build something out of nothing and make it look
-                     good.
-                  </p>
-                  <br></br>
-                  <p>
-                     In my design and my code i like to work with a{" "}
-                     <b> big picture</b> and clear <b>goal</b> in mind to create
-                     efficient and clear solutions in advance.
-                  </p>
-                  <p>
-                     I enjoy solving complex and big problems in splitting them
-                     into multiple simple ones.
-                  </p>
-                  <p>
-                     {" "}
-                     When I’m not developing websites , I work out or relax and
-                     draw illustations.
                   </p>
 
                   <ul>
@@ -316,6 +296,47 @@ export const Contact = ({ contact, closeContact }) => {
                         </a>
                      </li>
                   </ul>
+               </div>
+               <div className="divTable blueTable">
+                  <div className="divTableHeading">
+                     <div className="divTableRow">
+                        <div className="divTableHead">Front - End</div>
+                        <div className="divTableHead">Back - End</div>
+                        <div className="divTableHead">Other</div>
+                     </div>
+                  </div>
+                  <div className="divTableBody">
+                     <div className="divTableRow">
+                        <div className="divTableCell"></div>
+                        <div className="divTableCell"></div>
+                        <div className="divTableCell"></div>
+                     </div>
+                     <div className="divTableRow">
+                        <div className="divTableCell">HTML</div>
+                        <div className="divTableCell">NODE</div>
+                        <div className="divTableCell">GIT</div>
+                     </div>
+                     <div className="divTableRow">
+                        <div className="divTableCell">CSS/SASS</div>
+                        <div className="divTableCell">EXPRESS</div>
+                        <div className="divTableCell">POSTMAN</div>
+                     </div>
+                     <div className="divTableRow">
+                        <div className="divTableCell">JAVASCRIPT</div>
+                        <div className="divTableCell">ProgreSQL</div>
+                        <div className="divTableCell">cell3_4</div>
+                     </div>
+                     <div className="divTableRow">
+                        <div className="divTableCell">REACT</div>
+                        <div className="divTableCell">cell2_5</div>
+                        <div className="divTableCell">cell3_5</div>
+                     </div>
+                     <div className="divTableRow">
+                        <div className="divTableCell">REDUX</div>
+                        <div className="divTableCell">cell2_6</div>
+                        <div className="divTableCell">cell3_6</div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>

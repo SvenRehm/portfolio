@@ -1,18 +1,9 @@
 import React from "react"
 import "./Menu.css"
 
-export const Menu = ({
-   menu,
-   toggleContact,
-   closeMenu,
-
-   goToPage
-}) => {
+export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
    return (
-      <div
-         // className="menu-overlay"
-         className={menu ? "menu-overlay closed" : "menu-overlay"}
-      >
+      <div className={menu ? "menu-overlay closed" : "menu-overlay"}>
          <div className="menu-all">
             <ul className="menu-list">
                <li className="menu-item-1">
@@ -40,7 +31,7 @@ export const Menu = ({
                      Portfolio
                   </a>
                </li>
-               <li className="menu-item-5">
+               {/* <li className="menu-item-5">
                   <a
                      href="#skills"
                      className="vs-anchor"
@@ -51,7 +42,7 @@ export const Menu = ({
                   >
                      Skills
                   </a>
-               </li>
+               </li> */}
                <li className="menu-item-4">
                   <a
                      href="/"

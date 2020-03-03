@@ -5,7 +5,7 @@ export const Landing = ({
    menu,
    contact,
    toggleContact,
-
+   arrowhide,
    goToPage
 }) => {
    return (
@@ -71,7 +71,12 @@ export const Landing = ({
                   goToPage(1)
                }}
             >
-               <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+               <svg
+                  className={arrowhide ? "arrowhide" : ""}
+                  width="48"
+                  height="48"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
                   <g>
                      <rect
                         fill="none"

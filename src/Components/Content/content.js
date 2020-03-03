@@ -10,13 +10,13 @@ export const firstSection = {
    bullets: [
       "Focus und Ziel der Web App war es Redux zu lernen und das verständniss von React zu vertiefen",
       "Entwurf des UX/UI Designs in AdobeXD und Implementierung mit React/ReactRouter/Redux",
-      "Benutzte Kitsu Api Datenbank und diese mit Postman getestet",
-      "Entwicklung des Backends(Node) für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank in PostgreSQL wo weitere information zu der watchlist gespeichert werden",
+      "Kitsu Api Datenbank benutzt und diese mit Postman getestet",
+      "Entwicklung des Backends für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank mit mehreren Datentabellen um weitere information gespeichert werden",
       "Implementierte JSON web token für Authentifikation das im Lokalen Speicher gespeichert wird",
       "Hosting des Frontends und Backends auf Heroku durchgeführt"
    ],
 
-   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"],
+   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL", "POSTMAN"],
    // picture: "./images/SharedScreenshot.jpg"
    picture: picture
 }
