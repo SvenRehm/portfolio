@@ -180,12 +180,9 @@
    top: 20px;
    left: 20px;
    bottom: 20px;
-   /* top: 0;
-   left: 0; 
-    height: 90%;
-       width: 40%;*/
+
    object-fit: cover;
-   object-position: 0% 0%;
+   /* object-position: 0% 0%; */
    width: 35%;
    height: 93%;
    transition: all 200ms ease-in-out;

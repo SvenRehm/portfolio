@@ -20,7 +20,7 @@ export class App extends Component {
          menu: false,
          contact: false,
          arrowhide: false,
-         activePage: 0
+         activePage: 0,
       }
    }
 
@@ -40,11 +40,11 @@ export class App extends Component {
       this.setState({ menu: false })
    }
 
-   goToPage = pageNumber => {
+   goToPage = (pageNumber) => {
       this.reactPageScroller.goToPage(pageNumber)
    }
 
-   disableDownArrow = e => {
+   disableDownArrow = (e) => {
       // e === 2
       //    ? this.setState({ arrowhide: true })
       //    : this.setState({ arrowhide: false })
@@ -59,7 +59,7 @@ export class App extends Component {
    render() {
       let options = {
          animationTimer: 900,
-         pageOnChange: this.disableDownArrow
+         pageOnChange: this.disableDownArrow,
       }
 
       return (
@@ -89,7 +89,7 @@ export class App extends Component {
 
             <ReactPageScroller
                {...options}
-               ref={c => (this.reactPageScroller = c)}
+               ref={(c) => (this.reactPageScroller = c)}
             >
                <Landing
                   menu={this.state.menu}
@@ -110,7 +110,16 @@ export class App extends Component {
                   codelink={firstSection.codelink}
                />
 
-               <Sections menu={this.state.menu} skills={secondSection.skills} />
+               <Sections
+                  menu={this.state.menu}
+                  picture={secondSection.picture}
+                  headline={secondSection.headline}
+                  description={secondSection.description}
+                  bullets={secondSection.bullets}
+                  skills={secondSection.skills}
+                  demolink={secondSection.demolink}
+                  codelink={secondSection.codelink}
+               />
 
                {/* <Footer
                   menu={this.state.menu}

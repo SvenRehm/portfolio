@@ -17,7 +17,7 @@ export class Sections extends Component {
          bullets = [],
          codelink,
          demolink,
-         picture
+         picture,
       } = this.props
 
       const allskills = skills.map((item, key) => <li key={key}>{item}</li>)
@@ -32,7 +32,7 @@ export class Sections extends Component {
                   <div
                      className={menu ? "img-card img-slideup" : "img-card"}
                      href="/"
-                     onClick={event => {
+                     onClick={(event) => {
                         event.preventDefault()
                         this.setState({ isOpen: true })
                      }}
@@ -66,7 +66,7 @@ export class Sections extends Component {
                         <h1>{headline}</h1>
                         <h3 className="desctiption-link">{description}</h3>
 
-                        <h2>Focus und Ziel der App</h2>
+                        {/* <h2>Focus und Ziel der App</h2> */}
                         <ul className="projectBulllets">{projectBulllets}</ul>
                         {/* <p>{paragraph1}</p> */}
                         {/* <p>
