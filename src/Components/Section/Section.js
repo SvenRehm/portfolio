@@ -8,6 +8,7 @@ export class Sections extends Component {
       const currentState = this.state.menu
       this.setState({ menu: !currentState })
    }
+
    render() {
       const {
          menu,

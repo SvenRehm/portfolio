@@ -1,5 +1,5 @@
 import picture1 from "../../images/thumbnail/anime1.png"
-import picture2 from "../../images/thumbnail/face2.jpg"
+import picture2 from "../../images/thumbnail/face1.jpg"
 
 export const firstSection = {
    demolink: "https://myanimelist.herokuapp.com",
@@ -10,11 +10,11 @@ export const firstSection = {
 
    paragraph1: "Something Really good written",
    bullets: [
-      "Focus und Ziel der Web App war es Redux zu lernen und das verständnis von React zu vertiefen",
+      "Focus und Ziel der Web App war es mein verständnis von React zu vertiefen und Redux zu lernen",
+      "Kitsu Api als Datenbank verwendet",
       "Entwurf des UX/UI Designs in AdobeXD und Implementierung mit React/ReactRouter/Redux",
-      "Kitsu Api Datenbank benutzt und diese mit Postman getestet",
-      "Entwicklung des Backends für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank mit mehreren Datentabellen um weitere information gespeichert werden",
-      "Implementierte JSON web token für Authentifikation das im Lokalen Speicher gespeichert wird",
+      "Entwicklung des Backends für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank mit multiplen Datentabellen",
+      "Implementierte JSON web token im Lokalen Speicher für Authentifikation ",
       "Hosting des Frontends und Backends auf Heroku",
    ],
 
@@ -27,18 +27,14 @@ export const secondSection = {
    demolink: "https://facedetectproject.herokuapp.com/",
    codelink: "https://github.com/SvenRehm/face-detect-master",
    headline: "Face Detect",
-   description:
-      "Face Detect App in der man gesichter in bildern erkennen lassen kann",
+   description: "Face Detect App, die Gesichter in Bildern erkennt",
    paragraph1: "Something Really good written",
    bullets: [
-      "Focus und Ziel der Web App war es Redux zu lernen und das verständnis von React zu vertiefen",
-      "Entwurf des UX/UI Designs in AdobeXD und Implementierung mit React/ReactRouter/Redux",
-      "Kitsu Api Datenbank benutzt und diese mit Postman getestet",
-      "Entwicklung des Backends für Account erstellung mit Passwort-Hashen , Gestaltete Datenbank mit mehreren Datentabellen um weitere information gespeichert werden",
-      "Implementierte JSON web token für Authentifikation das im Lokalen Speicher gespeichert wird",
+      "Ziel bei der Entwicklung der Web App, war es mich mehr mit API's auseinander zu setzen und mehr Erfahrung sammeln",
+      "Clarifai API, Face Detect Model angewandt",
       "Hosting des Frontends und Backends auf Heroku",
    ],
-   skills: ["HTML/CSS", "REACT", "NODE", "POSTGRESSQL"],
+   skills: ["HTML/CSS", "REACT", "NODE"],
    picture: picture2,
 }
 
