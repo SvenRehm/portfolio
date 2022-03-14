@@ -1,5 +1,5 @@
 import picture1 from "../../images/thumbnail/anime1.png"
-import picture2 from "../../images/thumbnail/face1.jpg"
+import picture2 from "../../images/thumbnail/face2.jpg"
 
 export const firstSection = {
    demolink: "https://myanimelist.herokuapp.com",
