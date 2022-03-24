@@ -6,7 +6,7 @@ export const Header = ({ menu, toggleMenu, arrowhide, goToPage }) => {
       <div>
          <header className="header">
             <div className="header-container">
-               <a className="logo" href="/">
+               <a className="logo" href="/portfolio">
                   SR
                </a>
                <div />
@@ -37,7 +37,7 @@ export const Header = ({ menu, toggleMenu, arrowhide, goToPage }) => {
 
                className={arrowhide || menu ? "uparrow" : "uparrowhide"}
                href="/"
-               onClick={event => {
+               onClick={(event) => {
                   event.preventDefault()
                   goToPage(0)
                }}

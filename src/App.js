@@ -58,7 +58,9 @@ export class App extends Component {
 
    render() {
       let options = {
-         animationTimer: 900,
+         animationTimer: 850,
+         animationTimerBuffer: 10,
+         renderAllPagesOnFirstRender: true,
          pageOnChange: this.disableDownArrow,
       }
 
