@@ -59,6 +59,7 @@ export class Sections extends Component {
                      <div className="content "></div>
                      <h4>Skills Used</h4>
                      <ul className="skills">{allskills}</ul>
+                     <div className="seporator"></div>
                      <div
                         className={
                            menu ? "img-card-text img-slideup" : "img-card-text"
@@ -67,18 +68,7 @@ export class Sections extends Component {
                         <h1>{headline}</h1>
                         <h3 className="desctiption-link">{description}</h3>
 
-                        {/* <h2>Focus und Ziel der App</h2> */}
                         <ul className="projectBulllets">{projectBulllets}</ul>
-                        {/* <p>{paragraph1}</p> */}
-                        {/* <p>
-                           Lorem ipsum dolor sit amet, consetetur sadipscing
-                           elitr, sed diam nonumy eirmod tempor invidunt ut
-                           labore et dolore magna aliquyam erat, sed diam
-                           voluptua. At vero eos et accusam et justo duo dolores
-                           et ea rebum. Stet clita kasd gubergren, no sea
-                           takimata sanctus est Lorem ipsum dolor sit amet.
-                           Lorem ipsum dolor sit amet, consetetur sadipscing
-                        </p> */}
                      </div>
                   </div>
                </div>

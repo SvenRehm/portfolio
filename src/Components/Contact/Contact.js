@@ -62,7 +62,7 @@ export const Contact = ({ contact, closeContact }) => {
                      <a
                         id="close-btn"
                         href="/"
-                        onClick={event => {
+                        onClick={(event) => {
                            event.preventDefault()
                            closeContact()
                         }}
@@ -78,8 +78,8 @@ export const Contact = ({ contact, closeContact }) => {
                   <h4>Front End Developer</h4>
                   <h2>About Me</h2>
                   <p>
-                     Hello I’m a 26-year-old, Freelance Front end web developer.
-                     One year ago i found my passion in
+                     Hello I’m a Front End Web developer. Recently I found my
+                     passion in
                      <b>front end devepment</b> and the <b>problem solving</b>{" "}
                      aspect of it, since then my goal has been to learn new
                      technologies and skills so that I can build bigger and
