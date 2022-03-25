@@ -1,7 +1,46 @@
 import React from "react"
 import "./Header.css"
+import Select from "react-select"
 
-export const Header = ({ menu, toggleMenu, arrowhide, goToPage }) => {
+const options = [
+   { value: "True", label: "ENGLSIH" },
+   { value: "Flase", label: "GERMAN" },
+]
+const customStyles = {
+   option: (provided, state) => ({
+      ...provided,
+      borderBottom: "none",
+      color: "black",
+      padding: 20,
+      backgroundColor: "rgba(51, 170, 51,  0)",
+   }),
+   control: () => ({
+      // none of react-select's styles are passed to <Control />
+      width: 100,
+      backgroundColor: "rgba(51, 170, 51,  0)",
+   }),
+   singleValue: (provided, state) => {
+      return { ...provided, backgroundColor: "rgba(51, 170, 51,  0)" }
+   },
+   menu: (provided, state) => {
+      return {
+         ...provided,
+         backgroundColor: "rgba(51, 170, 51,  0)",
+         border: "none",
+      }
+   },
+   indicatorSeparator: (provided, state) => {
+      return { ...provided, backgroundColor: "rgba(51, 170, 51,  0)" }
+   },
+}
+
+export const Header = ({
+   menu,
+   toggleMenu,
+   arrowhide,
+   goToPage,
+   toggleLanguage,
+}) => {
    return (
       <div>
          <header className="header">
@@ -10,6 +49,25 @@ export const Header = ({ menu, toggleMenu, arrowhide, goToPage }) => {
                   SR
                </a>
                <div />
+               {/* <a
+                  className="hello"
+                  href="/"
+                  onClick={(event) => {
+                     event.preventDefault()
+
+                     toggleLanguage()
+                  }}
+               >
+                  GER
+               </a> */}
+               <Select
+                  styles={customStyles}
+                  classNamePrefix="react-select"
+                  defaultValue={options[0]}
+                  onChange={toggleLanguage}
+                  options={options}
+                  isSearchable={false}
+               />
                <button
                   // className="nav-toggle"
                   id="nav-toggle"

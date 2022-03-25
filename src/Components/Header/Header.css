@@ -34,7 +34,10 @@
    justify-content: space-between;
    z-index: 8;
 }
-
+.hello {
+   position: fixed;
+   right: 6.7%;
+}
 button,
 input[type="button"] {
    border: none;

@@ -9,7 +9,7 @@ import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import "react-image-lightbox/style.css"
 import { firstSection, secondSection } from "./Components/Content/content"
-
+import { firstSectionEN, secondSectionEN } from "./Components/Content/content"
 import ReactPageScroller from "react-page-scroller"
 
 export class App extends Component {
@@ -20,10 +20,16 @@ export class App extends Component {
          menu: false,
          contact: false,
          arrowhide: false,
+         languageEN: true,
          activePage: 0,
       }
    }
 
+   toggleLanguage = () => {
+      const currentState = this.state.languageEN
+
+      this.setState({ languageEN: !currentState })
+   }
    toggleMenu = () => {
       const currentState = this.state.menu
       this.setState({ menu: !currentState })
@@ -64,6 +70,9 @@ export class App extends Component {
          pageOnChange: this.disableDownArrow,
       }
 
+      const language = this.state.languageEN ? firstSectionEN : firstSection
+      const language2 = this.state.languageEN ? secondSectionEN : secondSection
+
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
             <div className="bg-lines hidden">
@@ -75,8 +84,10 @@ export class App extends Component {
             <Header
                menu={this.state.menu}
                toggleMenu={this.toggleMenu}
+               toggleLanguage={this.toggleLanguage}
                arrowhide={this.state.arrowhide}
                goToPage={this.goToPage}
+               language={this.state.languageEN}
             />
             <Menu
                menu={this.state.menu}
@@ -85,6 +96,7 @@ export class App extends Component {
                goToPage={this.goToPage}
             />
             <Contact
+               language={this.state.languageEN}
                contact={this.state.contact}
                closeContact={this.closeContact}
             />
@@ -100,29 +112,35 @@ export class App extends Component {
                   goToPage={this.goToPage}
                   arrowhide={this.state.arrowhide}
                />
-
                <Sections
+                  // menu={this.state.menu}
+                  // picture={firstSection.picture}
+                  // headline={firstSection.headline}
+                  // description={firstSection.description}
+                  // bullets={firstSection.bullets}
+                  // skills={firstSection.skills}
+                  // demolink={firstSection.demolink}
+                  // codelink={firstSection.codelink}
                   menu={this.state.menu}
-                  picture={firstSection.picture}
-                  headline={firstSection.headline}
-                  description={firstSection.description}
-                  bullets={firstSection.bullets}
-                  skills={firstSection.skills}
-                  demolink={firstSection.demolink}
-                  codelink={firstSection.codelink}
+                  picture={language.picture}
+                  headline={language.headline}
+                  description={language.description}
+                  bullets={language.bullets}
+                  skills={language.skills}
+                  demolink={language.demolink}
+                  codelink={language.codelink}
                />
 
                <Sections
                   menu={this.state.menu}
-                  picture={secondSection.picture}
-                  headline={secondSection.headline}
-                  description={secondSection.description}
-                  bullets={secondSection.bullets}
-                  skills={secondSection.skills}
-                  demolink={secondSection.demolink}
-                  codelink={secondSection.codelink}
+                  picture={language2.picture}
+                  headline={language2.headline}
+                  description={language2.description}
+                  bullets={language2.bullets}
+                  skills={language2.skills}
+                  demolink={language2.demolink}
+                  codelink={language2.codelink}
                />
-
                {/* <Footer
                   menu={this.state.menu}
                   toggleContact={this.toggleContact}

@@ -2,7 +2,7 @@ import React from "react"
 import "./Contact.css"
 import closeButton from "../../images/close-button.svg"
 
-export const Contact = ({ contact, closeContact }) => {
+export const Contact = ({ contact, closeContact, language }) => {
    return (
       <div className="contact-modal">
          <div
@@ -10,8 +10,8 @@ export const Contact = ({ contact, closeContact }) => {
             className={contact ? "contact-left is-open" : "contact-left"}
          >
             <h1>Contact Me</h1>
-            <h3>Internship proposal, freelance inquiry or ...</h3>
-
+            {/* <h3>Internship proposal, freelance inquiry or ...</h3> */}
+            <h3>Let’s make something special.</h3>
             <form
                className="form"
                action="https://formspree.io/rehm21@web.de"
@@ -57,7 +57,6 @@ export const Contact = ({ contact, closeContact }) => {
                }
             >
                <div className="content-contact-right">
-                  <h1>Sven Rehm</h1>
                   <div className="close-btn">
                      <a
                         id="close-btn"
@@ -74,17 +73,32 @@ export const Contact = ({ contact, closeContact }) => {
                         ></img>
                      </a>
                   </div>
-
-                  <h4>Front End Developer</h4>
-                  <h2>About Me</h2>
-                  <p>
-                     Hello I’m a Front End Web developer. Recently I found my
-                     passion in
-                     <b>front end devepment</b> and the <b>problem solving</b>{" "}
-                     aspect of it, since then my goal has been to learn new
-                     technologies and skills so that I can build bigger and
-                     better things in the future.
-                  </p>
+                  {/* <h1>Sven Rehm</h1>
+                  <h4>Front End Developer</h4> */}
+                  {/* <h2>About Me</h2> */}
+                  <h1>About Me</h1>
+                  {language ? (
+                     <p>
+                        Hello I’m a Front End Web developer. I have genuine
+                        passion in
+                        <b> front end devepment</b> and the{" "}
+                        <b>problem solving</b> aspect of it. My current goal is
+                        to learn new technologies and skills so that I can build
+                        bigger and more ambitious projects in the future. In my
+                        free time i work out and play games. Fan of TV Series
+                        House of Cards and Vikings.
+                     </p>
+                  ) : (
+                     <p>
+                        Hallo, ich bin ein Front-End-Webentwickler. Ich habe
+                        Begeisterung an Front-End-Entwicklung und mag es
+                        probleme zu lösen . Mein aktuelles Ziel ist neue
+                        Technologien und Fähigkeiten zu lernen, damit ich
+                        größere und ehrgeizigere Projekte in der Zukunft bauen
+                        kann. In meinem Freizeit trainiere ich und spiele
+                        Spiele.
+                     </p>
+                  )}
 
                   <ul>
                      <li>
@@ -191,58 +205,7 @@ export const Contact = ({ contact, closeContact }) => {
                            </svg>
                         </a>
                      </li>
-                     <li>
-                        <a id="linkedins2" href="/">
-                           <svg
-                              height="60px"
-                              version="1.1"
-                              viewBox="0 0 60 60"
-                              width="40px"
-                              xmlns="http://www.w3.org/2000/svg"
-                           >
-                              <title />
-                              <desc />
-                              <defs />
-                              <g
-                                 fill="none"
-                                 fillRule="evenodd"
-                                 id="soical"
-                                 stroke="none"
-                                 strokeWidth="1"
-                              >
-                                 <g
-                                    id="social"
-                                    transform="translate(-773.000000, -138.000000)"
-                                 >
-                                    <g
-                                       id="slices"
-                                       transform="translate(173.000000, 138.000000)"
-                                    />
-                                    <g
-                                       fill="#000000"
-                                       id="square-black"
-                                       transform="translate(173.000000, 138.000000)"
-                                    >
-                                       <path
-                                          d="M602.995937,0 L657.004063,0 C658.658673,0 660,1.33730974 660,2.99593743 L660,57.0040626 C660,58.6586731 658.66269,60 657.004063,60 L602.995937,60 C601.341327,60 600,58.6626903 600,57.0040626 L600,2.99593743 C600,1.34132688 601.33731,0 602.995937,0 Z"
-                                          id="square-7"
-                                       />
-                                    </g>
-                                    <g
-                                       fill="#FFFFFF"
-                                       id="icon"
-                                       transform="translate(182.000000, 150.000000)"
-                                    >
-                                       <path
-                                          d="M612.883075,31.8231512 L612.883075,13.5243389 L607.22737,13.5243389 L607.22737,31.8231512 L612.883075,31.8231512 Z M612.883075,7.03821455 C612.849388,5.40065996 611.758016,4.15384615 609.985054,4.15384615 C608.211632,4.15384615 607.052885,5.40065996 607.052885,7.03821455 C607.052885,8.64020234 608.177944,9.92307692 609.917219,9.92307692 L609.950906,9.92307692 C611.758016,9.92307692 612.883075,8.64020234 612.883075,7.03821455 Z M622.110042,31.8231517 L622.110042,21.3973729 C622.110042,20.8394014 622.15037,20.28143 622.314447,19.8836682 C622.763034,18.7682778 623.783956,17.6136637 625.498199,17.6136637 C627.743896,17.6136637 629.152278,18.8881587 629.152278,21.3973727 L629.152278,31.8231516 L634.846154,31.8231517 L634.846154,21.1183872 C634.846154,15.3839878 631.785045,12.715669 627.70191,12.715669 C624.354081,12.715669 622.884572,14.5873593 622.068608,15.861302 L622.109489,13.4139123 L616.425462,13.4139123 C616.507224,15.1657215 616.425462,31.8231516 616.425462,31.8231516 L622.110042,31.8231517 Z"
-                                          id="linkedin2"
-                                       />
-                                    </g>
-                                 </g>
-                              </g>
-                           </svg>
-                        </a>
-                     </li>
+
                      <li>
                         <a id="githubs2" href="/">
                            <svg
