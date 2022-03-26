@@ -61,6 +61,9 @@ export class App extends Component {
          this.setState({ arrowhide: false })
       }
    }
+   onChangeLanguage = (e) => {
+      this.setState({ languageEN: e.value })
+   }
 
    render() {
       let options = {
@@ -69,6 +72,8 @@ export class App extends Component {
          renderAllPagesOnFirstRender: true,
          pageOnChange: this.disableDownArrow,
       }
+
+      console.log(this.state.languageEN)
 
       const language = this.state.languageEN ? firstSectionEN : firstSection
       const language2 = this.state.languageEN ? secondSectionEN : secondSection
@@ -85,6 +90,7 @@ export class App extends Component {
                menu={this.state.menu}
                toggleMenu={this.toggleMenu}
                toggleLanguage={this.toggleLanguage}
+               onChangeLanguage={this.onChangeLanguage}
                arrowhide={this.state.arrowhide}
                goToPage={this.goToPage}
                language={this.state.languageEN}

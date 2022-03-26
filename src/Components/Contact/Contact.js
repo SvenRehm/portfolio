@@ -79,24 +79,25 @@ export const Contact = ({ contact, closeContact, language }) => {
                   <h1>About Me</h1>
                   {language ? (
                      <p>
-                        Hello I’m a Front End Web developer. I have genuine
-                        passion in
-                        <b> front end devepment</b> and the{" "}
+                        Hello I’m a Front-End Developer. I have genuine passion
+                        in
+                        <b> Front-End Developer</b> and the{" "}
                         <b>problem solving</b> aspect of it. My current goal is
                         to learn new technologies and skills so that I can build
                         bigger and more ambitious projects in the future. In my
-                        free time i work out and play games. Fan of TV Series
-                        House of Cards and Vikings.
+                        free time I work out, play games and watch TV series
+                        such as House of Cards and Vikings.
                      </p>
                   ) : (
                      <p>
-                        Hallo, ich bin ein Front-End-Webentwickler. Ich habe
-                        Begeisterung an Front-End-Entwicklung und mag es
-                        probleme zu lösen . Mein aktuelles Ziel ist neue
-                        Technologien und Fähigkeiten zu lernen, damit ich
-                        größere und ehrgeizigere Projekte in der Zukunft bauen
-                        kann. In meinem Freizeit trainiere ich und spiele
-                        Spiele.
+                        Hallo, ich bin ein Front-End-Entwickler. Ich habe echte
+                        Leidenschaft für Front-End-Entwickler und der
+                        Problemlösungsaspekt. Mein aktuelles Ziel ist es neue
+                        Technologien und Fähigkeiten zu erlernen, damit ich in
+                        Zukunft um in Zukunft größere und anspruchsvollere
+                        Projekte durchführen zu können. In meiner Freizeit
+                        trainiere ich, spiele Spiele und schaue Fernsehserien
+                        wie House of Cards und Vikings.
                      </p>
                   )}
 

@@ -3,34 +3,60 @@ import "./Header.css"
 import Select from "react-select"
 
 const options = [
-   { value: "True", label: "ENGLSIH" },
-   { value: "Flase", label: "GERMAN" },
+   { value: true, label: "English" },
+   { value: false, label: "German" },
 ]
 const customStyles = {
    option: (provided, state) => ({
       ...provided,
       borderBottom: "none",
-      color: "black",
-      padding: 20,
+      padding: "11px",
+      color: state.isSelected ? "#c0a426" : "black",
+      cursor: "pointer",
       backgroundColor: "rgba(51, 170, 51,  0)",
+   }),
+
+   container: () => ({
+      position: "fixed",
+      right: "7%",
+      cursor: "pointer",
+   }),
+
+   dropdownIndicator: () => ({
+      display: "none",
    }),
    control: () => ({
-      // none of react-select's styles are passed to <Control />
-      width: 100,
+      width: "100%",
       backgroundColor: "rgba(51, 170, 51,  0)",
    }),
+
    singleValue: (provided, state) => {
-      return { ...provided, backgroundColor: "rgba(51, 170, 51,  0)" }
+      return {
+         ...provided,
+         backgroundColor: "rgba(51, 170, 51,  0)",
+
+         zIndex: 500,
+      }
    },
+
    menu: (provided, state) => {
       return {
          ...provided,
          backgroundColor: "rgba(51, 170, 51,  0)",
-         border: "none",
+
+         boxShadow: "0px 0px teal",
+         margin: "0",
+         borderRadius: 0,
+         border: "0px solid",
+         borderColor: "rgba(51, 170, 51,  0)",
       }
    },
+   menuList: (provided, state) => {
+      return { ...provided, marginTop: "0" }
+   },
+
    indicatorSeparator: (provided, state) => {
-      return { ...provided, backgroundColor: "rgba(51, 170, 51,  0)" }
+      return { ...provided, display: "none" }
    },
 }
 
@@ -39,7 +65,8 @@ export const Header = ({
    toggleMenu,
    arrowhide,
    goToPage,
-   toggleLanguage,
+
+   onChangeLanguage,
 }) => {
    return (
       <div>
@@ -49,22 +76,11 @@ export const Header = ({
                   SR
                </a>
                <div />
-               {/* <a
-                  className="hello"
-                  href="/"
-                  onClick={(event) => {
-                     event.preventDefault()
 
-                     toggleLanguage()
-                  }}
-               >
-                  GER
-               </a> */}
                <Select
                   styles={customStyles}
-                  classNamePrefix="react-select"
                   defaultValue={options[0]}
-                  onChange={toggleLanguage}
+                  onChange={onChangeLanguage}
                   options={options}
                   isSearchable={false}
                />

@@ -285,8 +285,8 @@
 }
 .contact-right-wrapper .close-btn {
    position: absolute;
-   top: 7%;
-   right: 7%;
+   top: 10%;
+   right: 8%;
    transition: all ease-in-out 150ms;
    z-index: 50;
 }
