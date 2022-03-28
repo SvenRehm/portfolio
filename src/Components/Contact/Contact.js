@@ -81,7 +81,7 @@ export const Contact = ({ contact, closeContact, language }) => {
                      <p>
                         Hello I’m a Front-End Developer. I have genuine passion
                         in
-                        <b> Front-End Developer</b> and the{" "}
+                        <b> Front-End Developepment</b> and the{" "}
                         <b>problem solving</b> aspect of it. My current goal is
                         to learn new technologies and skills so that I can build
                         bigger and more ambitious projects in the future. In my
