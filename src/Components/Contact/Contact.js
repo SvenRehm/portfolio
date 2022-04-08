@@ -86,7 +86,13 @@ export const Contact = ({ contact, closeContact, language }) => {
                         to learn new technologies and skills so that I can build
                         bigger and more ambitious projects in the future. In my
                         free time I work out, play games and watch TV series
-                        such as House of Cards and Vikings.
+                        such as Suits and House of Cards.
+                        {/* Driven, self taught Front End Developer with a passion
+                        for building interactive and responsive websites. Web
+                        Development offers me engaging challenges to continually
+                        learn, improve upon my skills and solve problems. I
+                        enjoy to create new things and iterate on them until
+                        even the smallest details are perfect. */}
                      </p>
                   ) : (
                      <p>

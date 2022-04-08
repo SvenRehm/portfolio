@@ -6,7 +6,7 @@ export const Landing = ({
    contact,
    toggleContact,
    arrowhide,
-   goToPage
+   goToPage,
 }) => {
    return (
       <div
@@ -19,14 +19,16 @@ export const Landing = ({
             <div className="landing-headings">
                <h1>Sven Rehm</h1>
                <h3>
-                  I'm a Germany based web designer & frontend web developer with
-                  focus on designing clean and user friedly experiences
+                  {/* I'm a Germany based web designer & frontend web developer with
+                  focus on designing clean and user friedly experiences */}
+                  I am a Germany located Frontend Web Developer with a passion
+                  for building clean and user friendly experiences
                </h3>
 
                <a
                   className="btn btn-portfolio"
                   href="/"
-                  onClick={event => {
+                  onClick={(event) => {
                      event.preventDefault()
                      goToPage(1)
                   }}
@@ -67,7 +69,7 @@ export const Landing = ({
             <a
                className="landing-down-arrow vs-anchor"
                href="/"
-               onClick={event => {
+               onClick={(event) => {
                   event.preventDefault()
                   goToPage(1)
                }}
