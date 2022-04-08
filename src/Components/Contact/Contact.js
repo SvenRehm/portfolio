@@ -294,17 +294,17 @@ export const Contact = ({ contact, closeContact, language }) => {
                      <div className="divTableRow">
                         <div className="divTableCell">JAVASCRIPT</div>
                         <div className="divTableCell">ProgreSQL</div>
-                        <div className="divTableCell">cell3_4</div>
+                        <div className="divTableCell"></div>
                      </div>
                      <div className="divTableRow">
                         <div className="divTableCell">REACT</div>
-                        <div className="divTableCell">cell2_5</div>
-                        <div className="divTableCell">cell3_5</div>
+                        <div className="divTableCell"></div>
+                        <div className="divTableCell"></div>
                      </div>
                      <div className="divTableRow">
                         <div className="divTableCell">REDUX</div>
-                        <div className="divTableCell">cell2_6</div>
-                        <div className="divTableCell">cell3_6</div>
+                        <div className="divTableCell"></div>
+                        <div className="divTableCell"></div>
                      </div>
                   </div>
                </div>
