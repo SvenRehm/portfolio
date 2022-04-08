@@ -21,8 +21,8 @@ export const Landing = ({
                <h3>
                   {/* I'm a Germany based web designer & frontend web developer with
                   focus on designing clean and user friedly experiences */}
-                  I am a Germany located Frontend Web Developer with a passion
-                  for building clean and user friendly experiences
+                  I am a Germany based Frontend Web Developer with a passion for
+                  building clean and user friendly experiences
                </h3>
 
                <a
