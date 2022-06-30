@@ -1,5 +1,6 @@
 import picture1 from "../../images/thumbnail/anime1.png"
-import picture2 from "../../images/thumbnail/face1.jpg"
+import picture2 from "../../images/thumbnail/young soldier.webp"
+import picture3 from "../../images/thumbnail/face1.jpg"
 
 export const firstSection = {
    demolink: "https://myanimelist.herokuapp.com",
@@ -39,6 +40,39 @@ export const firstSectionEN = {
 }
 
 export const secondSection = {
+   demolink: "https://svenrehm.github.io/deskan-restoring-hope",
+   codelink: "https://github.com/SvenRehm/deskan-restoring-hope",
+   headline: "Deskan Restoring Hope",
+   description:
+      "Zusammenarbeit mit einer gemeinnützigen Organisation zur Verbesserung der Online-Präsenz",
+
+   bullets: [
+      "Ziel der Überarbeitung der Website war die Verbesserung und Umstrukturierung der Inhalte, um die Übersichtlichkeit und Struktur zu erhöhen",
+      "Ich konnte mehr Klarheit mit eindeutig definierten Abschnitten zum Inhalt erreichen",
+      "Eine bessere Struktur wurde erreicht, indem der Inhalt neu angeordnet wurde, um eine größere Geschichte zu erzählen.",
+      "Die Website befindet sich noch in der Entwicklung",
+   ],
+   skills: ["HTML/CSS", "REACT", "ADOBEXD"],
+   picture: picture2,
+}
+
+export const secondSectionEN = {
+   demolink: "https://svenrehm.github.io/deskan-restoring-hope",
+   codelink: "https://github.com/SvenRehm/deskan-restoring-hope",
+   headline: "Deskan Restoring Hope",
+   description:
+      "Working with a non profit organization to improve online presence",
+   bullets: [
+      "The goal of reworking the website was improvement and reorganization of content to increase clarity and structure",
+      "I was able to achieve more clarity with clear and defined sections to content",
+      "More structure was achieved by reorganizing content to tell a bigger story",
+      "The website is still a work in progress",
+   ],
+   skills: ["HTML/CSS", "JAVASCRIPT", "REACT", "ADOBE XD"],
+   picture: picture2,
+}
+
+export const thirdSection = {
    demolink: "https://facedetectproject.herokuapp.com/",
    codelink: "https://github.com/SvenRehm/face-detect-master",
    headline: "Face Detect",
@@ -52,8 +86,7 @@ export const secondSection = {
    skills: ["HTML/CSS", "REACT", "NODE"],
    picture: picture2,
 }
-
-export const secondSectionEN = {
+export const thirdSectionEN = {
    demolink: "https://facedetectproject.herokuapp.com/",
    codelink: "https://github.com/SvenRehm/face-detect-master",
    headline: "Face Detect",
@@ -64,5 +97,5 @@ export const secondSectionEN = {
       "Hosting des Frontends und Backends auf Heroku",
    ],
    skills: ["HTML/CSS", "REACT", "NODE"],
-   picture: picture2,
+   picture: picture3,
 }

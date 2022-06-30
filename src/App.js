@@ -8,8 +8,17 @@ import { Sections } from "./Components/Section/Section"
 import { Menu } from "./Components/Menu/Menu"
 import { Contact } from "./Components/Contact/Contact"
 import "react-image-lightbox/style.css"
-import { firstSection, secondSection } from "./Components/Content/content"
-import { firstSectionEN, secondSectionEN } from "./Components/Content/content"
+import {
+   firstSection,
+   secondSection,
+   thirdSection,
+} from "./Components/Content/content"
+import {
+   firstSectionEN,
+   secondSectionEN,
+   thirdSectionEN,
+} from "./Components/Content/content"
+
 import ReactPageScroller from "react-page-scroller"
 
 export class App extends Component {
@@ -51,10 +60,6 @@ export class App extends Component {
    }
 
    disableDownArrow = (e) => {
-      // e === 2
-      //    ? this.setState({ arrowhide: true })
-      //    : this.setState({ arrowhide: false })
-
       if (e >= 2) {
          this.setState({ arrowhide: true })
       } else {
@@ -73,11 +78,10 @@ export class App extends Component {
          pageOnChange: this.disableDownArrow,
       }
 
-      console.log(this.state.languageEN)
-
       const language = this.state.languageEN ? firstSectionEN : firstSection
       const language2 = this.state.languageEN ? secondSectionEN : secondSection
 
+      const language3 = this.state.languageEN ? thirdSectionEN : thirdSection
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
             <div className="bg-lines hidden">
@@ -119,14 +123,6 @@ export class App extends Component {
                   arrowhide={this.state.arrowhide}
                />
                <Sections
-                  // menu={this.state.menu}
-                  // picture={firstSection.picture}
-                  // headline={firstSection.headline}
-                  // description={firstSection.description}
-                  // bullets={firstSection.bullets}
-                  // skills={firstSection.skills}
-                  // demolink={firstSection.demolink}
-                  // codelink={firstSection.codelink}
                   menu={this.state.menu}
                   picture={language.picture}
                   headline={language.headline}
@@ -146,6 +142,16 @@ export class App extends Component {
                   skills={language2.skills}
                   demolink={language2.demolink}
                   codelink={language2.codelink}
+               />
+               <Sections
+                  menu={this.state.menu}
+                  picture={language3.picture}
+                  headline={language3.headline}
+                  description={language3.description}
+                  bullets={language3.bullets}
+                  skills={language3.skills}
+                  demolink={language3.demolink}
+                  codelink={language3.codelink}
                />
                {/* <Footer
                   menu={this.state.menu}
