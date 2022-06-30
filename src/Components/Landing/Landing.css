@@ -97,14 +97,14 @@
    text-transform: uppercase;
 }
 
-.landing h1:after {
-   /* content: "";
+/* .landing h1:after {
+   content: "";
    display: block;
    margin: 0 auto;
    width: 50%;
    padding-top: 20px;
-   border-bottom: 1px solid #f7f8fa; */
-}
+   border-bottom: 1px solid #f7f8fa; 
+} */
 .landing h1::selection {
    color: white;
    background: #383838;

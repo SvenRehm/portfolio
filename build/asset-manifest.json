@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.2dc5f903.chunk.css",
+    "main.js": "/portfolio/static/js/main.58dd3477.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.58dd3477.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
+    "static/css/2.9522b9fe.chunk.css": "/portfolio/static/css/2.9522b9fe.chunk.css",
+    "static/js/2.988b6116.chunk.js": "/portfolio/static/js/2.988b6116.chunk.js",
+    "static/js/2.988b6116.chunk.js.map": "/portfolio/static/js/2.988b6116.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.6c6e38ae2cac15aa4adce013495da3a3.js": "/portfolio/precache-manifest.6c6e38ae2cac15aa4adce013495da3a3.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.9522b9fe.chunk.css.map": "/portfolio/static/css/2.9522b9fe.chunk.css.map",
+    "static/css/main.2dc5f903.chunk.css.map": "/portfolio/static/css/main.2dc5f903.chunk.css.map",
+    "static/media/anime1.png": "/portfolio/static/media/anime1.041825d3.png",
+    "static/media/close-button.svg": "/portfolio/static/media/close-button.aeec2863.svg",
+    "static/media/face1.jpg": "/portfolio/static/media/face1.92af5248.jpg",
+    "static/media/young soldier.webp": "/portfolio/static/media/young soldier.31192cc1.webp"
+  }
+}
