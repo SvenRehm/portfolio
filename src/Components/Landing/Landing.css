@@ -65,16 +65,10 @@
 } */
 
 .landing .fullwidth-wrapper .landing-headings {
-   grid-column: 3 / span 8;
-   grid-row: 4 / span 7;
-   text-align: center;
-   color: white;
-   font-family: "Poppins", sans-serif;
-   border: solid 1px black;
+   grid-column: 4 / span 4;
+   grid-row: 5 / span 6;
+   align-items: start;
    height: 100%;
-   background-color: #272727;
-   background-image: url("../../images/simple-dashed.png");
-   background-size: 25px;
 }
 .landing .fullwidth-wrapper .call-to-action {
    grid-column: 3 / span 8;
@@ -85,71 +79,61 @@
 .landing h1 {
    /* font-weight: 300; */
    font-weight: 600;
-   margin: 14vh 0 0.3em 0;
-
-   /* font-size: 4.5em; */
-   font-size: 6em;
-   letter-spacing: 24px;
-   font-family: "Poppins", sans-serif;
-   /* color: #383838; */
-   color: #f7f8fa;
-   /* text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5); */
-   text-transform: uppercase;
+   font-size: 3.1em;
+   letter-spacing: 2px;
+   color: black;
 }
 
-/* .landing h1:after {
-   content: "";
-   display: block;
-   margin: 0 auto;
-   width: 50%;
-   padding-top: 20px;
-   border-bottom: 1px solid #f7f8fa; 
-} */
-.landing h1::selection {
+.landing h1::selection,
+.landing h3::selection {
    color: white;
    background: #383838;
 }
 
 .landing h3 {
    /* color: #f7f8fa; */
-   color: rgba(255, 255, 255, 0.616);
+   color: rgba(0, 0, 0, 0.616);
+   line-height: 1.5;
+   width: 95%;
    /* margin: 30px 70px 0 70px; */
    /* font-size: 1.4em; */
-   margin: 0 0 0.5em 0;
-   font-size: 1.6em;
-   font-family: "Poppins", sans-serif;
+   /* margin: 0 0 0.5em 0; */
+   font-size: 1.5em;
+
    font-weight: 300;
-   text-shadow: 2px 1px 4px #2a373a;
+   /* text-shadow: 2px 1px 4px #2a373a; */
 }
 
-.landing h3::selection {
-   color: #383838;
-   background: white;
-}
 .landing .btn {
+   margin: 4em 0 0 0;
    display: inline-block;
    color: rgba(22, 22, 22, 0.95);
    text-decoration: none;
-   font-family: "Roboto", sans-serif;
-   font-weight: 400;
-   background: #c0a426;
 
-   font-size: 1em;
-   border: 1px solid rgba(22, 22, 22, 0.95);
-   padding: 15px 50px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-   margin: 3.5em 2em 0em 2em;
+   font-weight: 600;
+   /* background: #c0a426; */
+
+   font-size: 1.2em;
+   /* border: 1px solid rgba(22, 22, 22, 0.95); */
+   /* padding: 15px 50px; */
+   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+   /* margin: 3.5em 2em 0em 2em; */
 
    text-transform: uppercase;
    transition: all 200ms ease-in-out;
+
+   padding: 0.3em 0.7em 0.3em 0.7em;
+}
+.landing .btn.btn-about-me {
+   margin-left: 2em;
 }
 
 .landing .btn:hover {
-   background: rgba(22, 22, 22, 0.95);
+   /* background: rgba(22, 22, 22, 0.95); */
    /* color: #30c9e8;
    border: 1px solid #30c9e8; */
    color: #c0a426;
-   border: 1px solid #c0a426;
+   /* border: 1px solid #c0a426; */
 }
 .landing p {
    margin-left: -55px;

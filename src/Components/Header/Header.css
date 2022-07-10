@@ -1,13 +1,16 @@
 .logo {
    position: fixed;
    text-decoration: none;
-   color: white;
 
-   background: #2a373a;
    font-size: 1.4em;
    padding: 0.3em 0.4em 0.3em 0.4em;
-   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   letter-spacing: -1px;
    z-index: 8;
+   /* color: white; */
+   /* background: #2a373a; */
+   color: black;
+   /* border: 1px solid black; */
 }
 .logo span {
    color: #00ddff;

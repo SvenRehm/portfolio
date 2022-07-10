@@ -5,7 +5,7 @@ import picture3 from "../../images/thumbnail/face1.jpg"
 export const firstSection = {
    demolink: "https://myanimelist.herokuapp.com",
    codelink: "https://github.com/SvenRehm/Anime-Api-Practice-Project",
-   headline: "MyAnimeList",
+   headline: "My Anime List",
    description:
       "Anime Entdeckungsplatform, die dir hilft zu verfolgen welche Anime du gerade schaust",
    bullets: [
@@ -16,13 +16,13 @@ export const firstSection = {
       "Implementierte JSON web token im Lokalen Speicher für Authentifikation ",
       "Hosting des Frontends und Backends auf Heroku",
    ],
-   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL", "POSTMAN"],
+   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"],
    picture: picture1,
 }
 export const firstSectionEN = {
    demolink: "https://myanimelist.herokuapp.com",
    codelink: "https://github.com/SvenRehm/Anime-Api-Practice-Project",
-   headline: "MyAnimeList",
+   headline: "My Anime List",
    description:
       "Anime discovery platform that helps you track anime you're watching and discover new ones",
    bullets: [
@@ -35,7 +35,7 @@ export const firstSectionEN = {
       "UX/UI Design with AdobeXD",
       "Hosted the Frontend and Backend on Heroku",
    ],
-   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL", "POSTMAN"],
+   skills: ["HTML/CSS", "REACT", "REDUX", "NODE", "POSTGRESSQL"],
    picture: picture1,
 }
 
@@ -68,7 +68,7 @@ export const secondSectionEN = {
       "More structure was achieved by reorganizing content to tell a bigger story",
       "The website is still a work in progress",
    ],
-   skills: ["HTML/CSS", "JAVASCRIPT", "REACT", "ADOBE XD"],
+   skills: ["HTML/CSS", "JAVASCRIPT", "REACT", "ADOBEXD"],
    picture: picture2,
 }
 

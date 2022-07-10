@@ -21,9 +21,10 @@ export const Landing = ({
                <h3>
                   {/* I'm a Germany based web designer & frontend web developer with
                   focus on designing clean and user friedly experiences */}
-                  I am a Germany based Frontend Web Developer with a passion for{" "}
+                  I am a Germany based Frontend Web Developer with a passion for
+                  building clean and <br />
+                  user friendly experiences
                </h3>
-               <h3>building clean and user friendly experiences</h3>
 
                <a
                   className="btn btn-portfolio"
@@ -33,7 +34,7 @@ export const Landing = ({
                      goToPage(1)
                   }}
                >
-                  My Work
+                  _My Work
                </a>
                <a
                   className="btn btn-about-me"
@@ -42,7 +43,7 @@ export const Landing = ({
                      toggleContact()
                   }}
                >
-                  About me
+                  _About me
                </a>
             </div>
             {/* <div className="call-to-action"> */}
