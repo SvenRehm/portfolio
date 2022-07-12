@@ -277,11 +277,6 @@ export const Contact = ({ contact, closeContact, language }) => {
                   </div>
                   <div className="divTableBody">
                      <div className="divTableRow">
-                        <div className="divTableCell"></div>
-                        <div className="divTableCell"></div>
-                        <div className="divTableCell"></div>
-                     </div>
-                     <div className="divTableRow">
                         <div className="divTableCell">HTML</div>
                         <div className="divTableCell">NODE</div>
                         <div className="divTableCell">GIT</div>
