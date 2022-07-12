@@ -65,11 +65,21 @@
 } */
 
 .landing .fullwidth-wrapper .landing-headings {
-   grid-column: 4 / span 4;
+   grid-column: 3 / span 4;
    grid-row: 5 / span 6;
    align-items: start;
    height: 100%;
 }
+.landing .fullwidth-wrapper .heroimg {
+   grid-column: 8 / 11;
+   grid-row: 8 / 12;
+   /* align-items: start; */
+   width: 100%;
+
+   object-fit: cover;
+   /* height: 100%; */
+}
+
 .landing .fullwidth-wrapper .call-to-action {
    grid-column: 3 / span 8;
    grid-row: 8 / span 2;
@@ -77,10 +87,13 @@
 }
 
 .landing h1 {
-   /* font-weight: 300; */
-   font-weight: 600;
-   font-size: 3.1em;
+   /* font-weight: 600;
+   font-size: 3.1em; */
+
+   font-weight: 800;
+   font-size: 5em;
    letter-spacing: 2px;
+
    color: black;
 }
 

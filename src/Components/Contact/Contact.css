@@ -33,6 +33,7 @@
    animation-name: fadeIn;
    animation-fill-mode: forwards;
    opacity: 0;
+   font-weight: 700;
 }
 .contact-left h1::selection {
    color: #383838;
@@ -183,10 +184,11 @@
 .contact-right-wrapper .contact-right .content-contact-right h1 {
    letter-spacing: 2px;
 
-   font-weight: 400;
+   /* font-weight: 400; */
    font-size: 2em;
    margin-top: 0.2em;
    margin-bottom: 10px;
+   font-weight: 700;
 }
 .contact-right-wrapper .contact-right .content-contact-right h1::selection {
    background: #383838;

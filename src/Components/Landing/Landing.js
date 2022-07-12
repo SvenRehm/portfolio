@@ -1,5 +1,6 @@
 import React from "react"
 import "./Landing.css"
+import img from "../../images/hero.jpg"
 
 export const Landing = ({
    menu,
@@ -14,8 +15,9 @@ export const Landing = ({
          className={menu || contact ? "fadeout-landing landing" : "landing"}
       >
          <div className="fullwidth-wrapper">
-            <div className="background-dark" />
-            <div className="background-light" />
+            {/* <div className="background-dark" />
+            <div className="background-light" /> */}
+            <img className="heroimg" src={img} alt="heroimg"></img>
             <div className="landing-headings">
                <h1>Sven Rehm</h1>
                <h3>
