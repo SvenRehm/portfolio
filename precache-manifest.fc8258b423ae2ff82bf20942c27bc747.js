@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "451e8689d02c12c4f9eb6108017e1504",
+    "revision": "42b31d3679d5e544097f7f89131d201f",
     "url": "/portfolio/index.html"
   },
   {
@@ -8,24 +8,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/css/2.9522b9fe.chunk.css"
   },
   {
-    "revision": "f4d503931142fd007512",
-    "url": "/portfolio/static/css/main.7625cf4e.chunk.css"
+    "revision": "e8c8dfe83901a76164f1",
+    "url": "/portfolio/static/css/main.5827ad9f.chunk.css"
   },
   {
     "revision": "21bed612bb34dbd125bf",
     "url": "/portfolio/static/js/2.4906895a.chunk.js"
   },
   {
-    "revision": "f4d503931142fd007512",
-    "url": "/portfolio/static/js/main.c68d594a.chunk.js"
+    "revision": "e8c8dfe83901a76164f1",
+    "url": "/portfolio/static/js/main.dd7104fd.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "041825d32c0225f70deee8153e88c85f",
-    "url": "/portfolio/static/media/anime1.041825d3.png"
+    "revision": "1ee37d02f572d55f60356ed81aa2f513",
+    "url": "/portfolio/static/media/anime.1ee37d02.jpeg"
   },
   {
     "revision": "aeec28632f4519bdb1c51013fead8ccd",
