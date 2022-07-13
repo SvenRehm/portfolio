@@ -1,13 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Contact.css"
 import closeButton from "../../images/close-button.svg"
-import { useForm } from "@formspree/react"
+
+const FORM_ENDPOINT =
+   "https://public.herotofu.com/v1/d63d9060-02d2-11ed-bc36-e1ea9ccadd33"
 
 export const Contact = ({ contact, closeContact, language }) => {
-   const [state, handleSubmit] = useForm("{rehm21@web.de")
+   const [submitted, setSubmitted] = useState(false)
+   const handleSubmit = () => {
+      setTimeout(() => {
+         setSubmitted(true)
+      }, 100)
+   }
 
-   if (state.succeeded) {
-      return <div>Thank you for signing up!</div>
+   if (submitted) {
+      return (
+         <>
+            <div className="text-2xl">Thank you!</div>
+            <div className="text-md">We'll be in touch soon.</div>
+         </>
+      )
    }
    return (
       <div className="contact-modal">
@@ -19,8 +31,11 @@ export const Contact = ({ contact, closeContact, language }) => {
             {/* <h3>Internship proposal, freelance inquiry or ...</h3> */}
             <h3>Let’s make something special.</h3>
             <form
+               action={FORM_ENDPOINT}
                onSubmit={handleSubmit}
-               method="post"
+               method="POST"
+               target="_blank"
+               // method="post"
                // className="form"
                // action="https://formspree.io/f/rehm21@web.de"
                // method="POST"
@@ -45,11 +60,9 @@ export const Contact = ({ contact, closeContact, language }) => {
                      id="message"
                   ></textarea>
                </div>
-               <button
-                  className="form-button"
-                  type="submit"
-                  disabled={state.submitting}
-               ></button>
+               <button className="form-button" type="submit">
+                  Submit
+               </button>
             </form>
          </div>
          <div
@@ -108,7 +121,7 @@ export const Contact = ({ contact, closeContact, language }) => {
 
                   <ul>
                      <li>
-                        <a id="twitters2" href="/">
+                        <a id="twitters2" href="https://twitter.com/xnjem">
                            <svg
                               height="60px"
                               version="1.1"
@@ -160,7 +173,10 @@ export const Contact = ({ contact, closeContact, language }) => {
                         </a>
                      </li>
                      <li>
-                        <a id="mails2" href="/">
+                        <a
+                           id="mails2"
+                           href="mailto:sven.rehm.business@gmail.com"
+                        >
                            <svg
                               height="60px"
                               version="1.1"
@@ -213,7 +229,10 @@ export const Contact = ({ contact, closeContact, language }) => {
                      </li>
 
                      <li>
-                        <a id="githubs2" href="/">
+                        <a
+                           id="githubs2"
+                           href="https://github.com/SvenRehm?tab=repositories"
+                        >
                            <svg
                               height="60px"
                               version="1.1"
