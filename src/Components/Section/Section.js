@@ -60,7 +60,7 @@ export class Sections extends Component {
                            className="viewdemo"
                            href={demolink}
                         >
-                           _View Demo
+                           View Demo
                         </a>
 
                         <a
@@ -68,7 +68,7 @@ export class Sections extends Component {
                            href={codelink}
                            onClick={() => window.open(codelink, "_blank")}
                         >
-                           _View Code
+                           View Code
                         </a>
                      </div>
                   </div>

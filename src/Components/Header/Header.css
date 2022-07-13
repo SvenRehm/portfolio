@@ -114,25 +114,50 @@ button:hover {
    transform: rotate(-45deg) translateY(0em) translateX(0em);
 }
 
-@media (max-width: 1024px) {
-   .container .header .header-container {
+.react-select-container {
+   position: fixed;
+   right: 7%;
+   cursor: pointer;
+}
+
+@media only screen and (max-width: 1500px) {
+   .header .header-container {
+      padding: 0 100px;
+   }
+   .uparrow {
+      right: 4%;
+      bottom: 25px;
+   }
+}
+@media only screen and (max-width: 1200px) {
+   .header .header-container {
       padding: 0 80px;
+   }
+   .react-select-container {
+      right: 9%;
+   }
+   .uparrow {
+      right: 4%;
+      bottom: 25px;
    }
 }
 
-@media (min-width: 380px) {
-   .container .header .header-container {
-      padding: 0 35px;
-      margin: 20px auto;
+@media only screen and (max-width: 910px) {
+   .header .header-container {
+      padding: 0 40px;
    }
-   .grid .img-card-text {
-      top: 65%;
+   .react-select-container {
+      right: 10%;
    }
-   .grid .img-card-text a {
-      font-size: 1.8em;
-      opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+   .header .header-container {
+      padding: 0 40px;
    }
-   .grid .img-card-text a.desctiption-link {
-      font-size: 0.8em;
+
+   .uparrow {
+      right: 4%;
+      bottom: 15px;
    }
 }

@@ -18,8 +18,8 @@ const customStyles = {
 
    container: () => ({
       position: "fixed",
-      right: "7%",
-      cursor: "pointer",
+      // right: "7%",
+      // cursor: "pointer",
    }),
 
    dropdownIndicator: () => ({
@@ -78,6 +78,7 @@ export const Header = ({
                <div />
 
                <Select
+                  className="react-select-container"
                   styles={customStyles}
                   defaultValue={options[0]}
                   onChange={onChangeLanguage}

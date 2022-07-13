@@ -89,6 +89,20 @@ ul.menu-list {
    animation-fill-mode: forwards;
 }
 
+@keyframes fadeInLi {
+   0% {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   50% {
+      opacity: 0.1;
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 @media (max-width: 376px) {
    .menu-overlay .menu-all ul {
       list-style: none;
@@ -106,16 +120,13 @@ ul.menu-list {
    }
 }
 
-@keyframes fadeInLi {
-   0% {
-      opacity: 0;
-      transform: translateY(100px);
+@media (max-width: 910px) {
+   .menu-overlay .menu-all {
+      grid-column: 3 / span 8;
    }
-   50% {
-      opacity: 0.1;
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+@media (max-width: 768px) {
+   .menu-overlay .menu-all {
+      grid-column: 1 / span 12;
    }
 }

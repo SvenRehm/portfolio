@@ -1,4 +1,6 @@
-import picture1 from "../../images/thumbnail/anime1.png"
+// import picture1 from "../../images/thumbnail/anime1.png"
+import picture1 from "../../images/thumbnail/anime.jpeg"
+
 import picture2 from "../../images/thumbnail/young soldier.webp"
 import picture3 from "../../images/thumbnail/face1.jpg"
 

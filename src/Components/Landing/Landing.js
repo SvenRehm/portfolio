@@ -36,7 +36,7 @@ export const Landing = ({
                      goToPage(1)
                   }}
                >
-                  _My Work
+                  My Work
                </a>
                <a
                   className="btn btn-about-me"
@@ -45,7 +45,7 @@ export const Landing = ({
                      toggleContact()
                   }}
                >
-                  _About me
+                  About me
                </a>
             </div>
             {/* <div className="call-to-action"> */}

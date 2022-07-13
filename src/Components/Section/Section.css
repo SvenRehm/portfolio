@@ -48,6 +48,7 @@
    opacity: 1;
    margin: 0;
    text-align: start;
+   font-weight: 800;
 }
 
 .grid h2 {
@@ -93,14 +94,15 @@
 .grid .viewbuttons {
    position: absolute;
    /* bottom: 2.5em; */
-   /* left: 40%; */
+   left: 38%;
    /* width: 100%; */
    bottom: 0;
-   left: 0;
+   /* left: 0; */
    z-index: 7;
-   height: 60px;
-   width: 35%;
-   background-color: rgba(0, 0, 0, 0.507);
+   /* height: 60px; */
+   width: 500px;
+   /* background-color: rgba(0, 0, 0, 0.507); */
+   padding: 3em 0;
 }
 .grid .viewdemo {
    text-decoration: none;
@@ -108,6 +110,7 @@
    z-index: 7;
    font-weight: 600;
    padding: 0.3em 0.7em 0.3em 0.7em;
+   margin: 0 0 0 2em;
    font-size: 1.2em;
    text-transform: uppercase;
    transition: all 250ms ease-in-out;
@@ -184,11 +187,7 @@
    list-style-type: none;
    padding: 0;
    text-align: center;
-   /* width: 200px;
-   top: 50%; */
-   /* top: 0; */
    right: 0;
-   /* transform: translateY(-50%); */
    text-decoration: none;
    color: rgb(219, 219, 219);
    font-size: 1em;
@@ -208,7 +207,6 @@
    color: rgb(219, 219, 219);
    opacity: 1;
    transform: rotate(-90deg);
-
    bottom: -0.8em;
    right: 0;
 }
@@ -263,5 +261,137 @@
    100% {
       transform: translateY(0);
       opacity: 1;
+   }
+}
+
+@media only screen and (max-width: 1500px) {
+   .grid .img-card {
+      grid-column: 2 / span 10;
+      grid-row: 3 / span 9;
+      width: 95%;
+   }
+}
+@media only screen and (max-width: 1200px) {
+   .grid .img-card {
+      grid-column: 2 / span 10;
+      grid-row: 3 / span 9;
+      width: 100%;
+   }
+   .grid .img-card-text h3.desctiption-link {
+      margin-top: 1.2em;
+      margin-bottom: 2em;
+
+      font-size: 1.1em;
+
+      width: 500px;
+   }
+   .grid .projectBulllets {
+      padding-left: 15px;
+      width: 500px;
+      font-size: 1.1em;
+   }
+   .grid .viewbuttons {
+      left: 37%;
+      width: 500px;
+      padding: 3em 0;
+   }
+}
+
+@media only screen and (max-width: 1060px) {
+   .grid .img-card-text h3.desctiption-link {
+      margin-top: 1.2em;
+      margin-bottom: 2em;
+      font-size: 1.1em;
+      width: 400px;
+   }
+   .grid .projectBulllets {
+      padding-left: 15px;
+      width: 400px;
+      font-size: 1em;
+   }
+   .grid .viewbuttons {
+      width: 400px;
+      padding: 3em 0;
+   }
+}
+
+@media only screen and (max-width: 830px) {
+   .grid .img-card-text h1 {
+      width: 350px;
+      font-size: 2.5em;
+   }
+   .grid .img-card-text h3.desctiption-link {
+      margin-top: 1.2em;
+      margin-bottom: 2em;
+      font-size: 1em;
+      width: 350px;
+   }
+   .grid .projectBulllets {
+      padding-left: 15px;
+      width: 350px;
+      font-size: 1em;
+   }
+   .grid .viewbuttons {
+      position: absolute;
+      width: 350px;
+      padding: 3em 0;
+      left: 35%;
+   }
+
+   .grid .viewcode {
+      margin-left: 1.1em;
+      font-size: 1.1em;
+   }
+
+   .grid .viewdemo {
+      font-size: 1.1em;
+   }
+}
+
+@media only screen and (max-width: 470px) {
+   .grid .img-card img {
+      display: none;
+   }
+   .grid .img-card-text {
+      top: 30px;
+      left: 30px;
+   }
+   .grid .img-card-text h1 {
+      width: 350px;
+      margin-bottom: 1em;
+      font-size: 2.5em;
+   }
+   .grid .img-card-text h3.desctiption-link {
+      margin-top: 1.2em;
+      margin-bottom: 2em;
+      font-size: 0.9em;
+      width: 350px;
+   }
+   .grid .projectBulllets {
+      padding-left: 15px;
+      width: 310px;
+      font-size: 0.9em;
+   }
+   .grid .viewbuttons {
+      position: absolute;
+      width: 350px;
+      padding: 3em 0;
+      left: 30px;
+   }
+
+   .grid .viewcode {
+      margin-left: 1.1em;
+      font-size: 1.1em;
+   }
+
+   .grid .viewdemo {
+      margin-left: 0;
+      font-size: 1.1em;
+   }
+   .grid .skills li {
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 700;
+      margin: 0.8em;
    }
 }
