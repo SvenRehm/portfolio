@@ -4,18 +4,18 @@
    "version": "0.1.0",
    "private": true,
    "dependencies": {
-      "jquery": "^3.4.1",
-      "react": "^16.8.6",
-      "react-dom": "^16.8.6",
-      "react-full-page": "^0.1.7",
+      "@formspree/react": "^2.3.0",
+      "react": "*",
+      "react-dom": "^17.0.2",
+      "react-full-page": "^0.1.12",
       "react-fullpage": "^0.1.19",
-      "react-image-lightbox": "^5.1.0",
-      "react-modal": "^3.11.1",
+      "react-image-lightbox": "^5.1.4",
+      "react-modal": "^3.15.1",
       "react-onepage": "^1.1.0",
       "react-page-scroller": "^1.5.1",
-      "react-scripts": "3.0.1",
+      "react-scripts": "^5.0.1",
       "react-scrollpage": "^1.0.2",
-      "react-select": "^5.2.2"
+      "react-select": "^5.4.0"
    },
    "scripts": {
       "start": "react-scripts --openssl-legacy-provider start",

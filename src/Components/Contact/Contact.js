@@ -1,8 +1,14 @@
 import React from "react"
 import "./Contact.css"
 import closeButton from "../../images/close-button.svg"
+import { useForm } from "@formspree/react"
 
 export const Contact = ({ contact, closeContact, language }) => {
+   const [state, handleSubmit] = useForm("{rehm21@web.de")
+
+   if (state.succeeded) {
+      return <div>Thank you for signing up!</div>
+   }
    return (
       <div className="contact-modal">
          <div
@@ -13,9 +19,11 @@ export const Contact = ({ contact, closeContact, language }) => {
             {/* <h3>Internship proposal, freelance inquiry or ...</h3> */}
             <h3>Let’s make something special.</h3>
             <form
-               className="form"
-               action="https://formspree.io/rehm21@web.de"
-               method="POST"
+               onSubmit={handleSubmit}
+               method="post"
+               // className="form"
+               // action="https://formspree.io/f/rehm21@web.de"
+               // method="POST"
             >
                <div className="label-name">
                   <input placeholder="Name" type="text" name="name"></input>
@@ -24,8 +32,9 @@ export const Contact = ({ contact, closeContact, language }) => {
                <div className="label-email">
                   <input
                      placeholder="Email"
+                     id="email"
                      type="email"
-                     name="_replyto"
+                     name="email"
                      required
                   ></input>
                </div>
@@ -33,14 +42,14 @@ export const Contact = ({ contact, closeContact, language }) => {
                   <textarea
                      placeholder="Write a message..."
                      name="message"
-                     id=""
+                     id="message"
                   ></textarea>
                </div>
-               <input
+               <button
                   className="form-button"
                   type="submit"
-                  value="Send"
-               ></input>
+                  disabled={state.submitting}
+               ></button>
             </form>
          </div>
          <div
@@ -73,26 +82,16 @@ export const Contact = ({ contact, closeContact, language }) => {
                         ></img>
                      </a>
                   </div>
-                  {/* <h1>Sven Rehm</h1>
-                  <h4>Front End Developer</h4> */}
-                  {/* <h2>About Me</h2> */}
+
                   <h1>About Me</h1>
                   {language ? (
                      <p>
-                        Hello I’m a Front-End Developer. I have genuine passion
-                        in
-                        <b> Front-End Developepment</b> and the{" "}
+                        Hello I’m a Front-End Developer. <br />I have genuine
+                        passion in
+                        <b> Front-End Developepment</b> and the
                         <b>problem solving</b> aspect of it. My current goal is
                         to learn new technologies and skills so that I can build
-                        bigger and more ambitious projects in the future. In my
-                        free time I work out, play games and watch TV series
-                        such as Suits and House of Cards.
-                        {/* Driven, self taught Front End Developer with a passion
-                        for building interactive and responsive websites. Web
-                        Development offers me engaging challenges to continually
-                        learn, improve upon my skills and solve problems. I
-                        enjoy to create new things and iterate on them until
-                        even the smallest details are perfect. */}
+                        bigger and more ambitious projects in the future.
                      </p>
                   ) : (
                      <p>
@@ -266,42 +265,6 @@ export const Contact = ({ contact, closeContact, language }) => {
                         </a>
                      </li>
                   </ul>
-               </div>
-               <div className="divTable blueTable">
-                  <div className="divTableHeading">
-                     <div className="divTableRow">
-                        <div className="divTableHead">Front - End</div>
-                        <div className="divTableHead">Back - End</div>
-                        <div className="divTableHead">Other</div>
-                     </div>
-                  </div>
-                  <div className="divTableBody">
-                     <div className="divTableRow">
-                        <div className="divTableCell">HTML</div>
-                        <div className="divTableCell">NODE</div>
-                        <div className="divTableCell">GIT</div>
-                     </div>
-                     <div className="divTableRow">
-                        <div className="divTableCell">CSS/SASS</div>
-                        <div className="divTableCell">EXPRESS</div>
-                        <div className="divTableCell">POSTMAN</div>
-                     </div>
-                     <div className="divTableRow">
-                        <div className="divTableCell">JAVASCRIPT</div>
-                        <div className="divTableCell">ProgreSQL</div>
-                        <div className="divTableCell"></div>
-                     </div>
-                     <div className="divTableRow">
-                        <div className="divTableCell">REACT</div>
-                        <div className="divTableCell"></div>
-                        <div className="divTableCell"></div>
-                     </div>
-                     <div className="divTableRow">
-                        <div className="divTableCell">REDUX</div>
-                        <div className="divTableCell"></div>
-                        <div className="divTableCell"></div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>

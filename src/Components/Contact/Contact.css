@@ -1,3 +1,7 @@
+.contact-modal {
+   width: 100%;
+   height: 100%;
+}
 .contact-left {
    display: grid;
    justify-self: center;
@@ -9,7 +13,7 @@
    left: -100%;
    height: 100vh;
    width: 50vw;
-   background: rgba(22, 22, 22, 0.95);
+   background: rgba(22, 22, 22, 0.97);
    z-index: 50;
    overflow: hidden;
    transition: all ease-in-out 700ms 100ms;
@@ -23,17 +27,15 @@
    grid-column: 3 / span 7;
    color: white;
    letter-spacing: 2px;
-
-   font-weight: 400;
-   font-size: 2em;
+   font-weight: 900;
+   font-size: 3em;
    margin-left: -10px;
-   margin-top: 30px;
+
    animation-delay: 1.3s;
    animation-duration: 400ms;
    animation-name: fadeIn;
    animation-fill-mode: forwards;
    opacity: 0;
-   font-weight: 700;
 }
 .contact-left h1::selection {
    color: #383838;
@@ -183,12 +185,9 @@
 }
 .contact-right-wrapper .contact-right .content-contact-right h1 {
    letter-spacing: 2px;
-
-   /* font-weight: 400; */
-   font-size: 2em;
-   margin-top: 0.2em;
-   margin-bottom: 10px;
-   font-weight: 700;
+   font-size: 3em;
+   margin: 0 0 1em 0;
+   font-weight: 900;
 }
 .contact-right-wrapper .contact-right .content-contact-right h1::selection {
    background: #383838;
@@ -225,7 +224,7 @@
 .contact-right-wrapper .contact-right .content-contact-right ul {
    list-style: none;
    position: absolute;
-   top: 90%;
+   top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
@@ -300,80 +299,6 @@
    width: 20px;
 }
 
-div.blueTable {
-   text-align: center;
-   /* margin: 5em auto 0 auto; */
-   /* width: 80%; */
-   grid-column: 3 / span 8;
-   margin-top: 1.5em;
-
-   grid-row: 6 / span 5;
-}
-.divTable.blueTable .divTableCell,
-.divTable.blueTable .divTableHead {
-   /* border: 1px solid #aaaaaa; */
-   font-size: 1.5em;
-   /* padding: 4px 0px; */
-   margin: 0;
-   padding: 0;
-}
-.divTable.blueTable .divTableBody .divTableCell {
-   font-size: 1.1em;
-}
-.divTable.blueTable
-   .divTableHeading
-   .divTable.blueTable
-   .divTableHeading
-   .divTableHead {
-   font-size: 15px;
-   font-weight: bold;
-   text-align: center;
-}
-.blueTable .tableFootStyle {
-   font-size: 14px;
-}
-.blueTable .tableFootStyle .links {
-   text-align: right;
-}
-.blueTable .tableFootStyle .links a {
-   display: inline-block;
-   background: #1c6ea4;
-   color: #ffffff;
-   padding: 4px 8px;
-   border-radius: 5px;
-}
-.blueTable.outerTableFooter {
-   border-top: none;
-}
-.blueTable.outerTableFooter .tableFootStyle {
-   padding: 6px 5px;
-}
-
-.divTable {
-   display: table;
-}
-.divTableRow {
-   display: table-row;
-   height: 60px;
-}
-.divTableHeading {
-   display: table-header-group;
-}
-.divTableCell,
-.divTableHead {
-   display: table-cell;
-   width: 33%;
-}
-
-.divTableHeading {
-   display: table-header-group;
-}
-.divTableFoot {
-   display: table-footer-group;
-}
-.divTableBody {
-   display: table-row-group;
-}
 @keyframes slide-left {
    0% {
       opacity: 0;
@@ -436,378 +361,59 @@ div.blueTable {
    }
 }
 
-@media (max-width: 1027px) {
+@media only screen and (max-width: 1500px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 910px) {
+}
+
+@media only screen and (max-width: 860px) {
    .contact-right-wrapper .contact-right .content-contact-right {
-      grid-row: 4/ -1;
-   }
-   .contact-right-wrapper .contact-right .content-contact-right h1 {
-      font-size: 2em;
-      margin-top: 0.7em;
-   }
-   .contact-right-wrapper .contact-right .content-contact-right h4 {
-      margin-bottom: 4em;
+      grid-column: 3 / span 7;
+      grid-row: 5 / span 4;
+      margin-right: 1em;
    }
    .contact-right-wrapper .contact-right .content-contact-right ul {
-      top: 87%;
+      top: 80%;
    }
-}
-
-@media (max-width: 380px) {
+   .contact-right-wrapper .close-btn {
+      top: 15%;
+      right: 10%;
+   }
    .contact-modal {
-      display: relative;
-      overflow: auto;
-      width: 100vw;
+      background-color: red;
+      z-index: 600;
    }
-   .contact-modal.hide {
-      display: none;
+   .contact-right-wrapper .contact-right {
+      height: 70vh;
    }
-   .contact-modal .contact-left {
-      display: grid;
-      height: 90vh;
-      width: 100%;
-      overflow: hidden;
-      position: absolute;
-      z-index: 100;
-      top: 85%;
-      transition: all ease-in-out 1s 100ms;
-   }
-   .contact-modal .contact-left h1 {
-      margin-bottom: 45px;
-      grid-row: 1 / span 2;
-      grid-column: 4 / span 6;
-      letter-spacing: 1.5px;
-      text-align: center;
-      font-size: 2em;
-   }
-   .contact-modal .contact-left h3 {
-      grid-row: 2 / span 2;
-      grid-column: 3 / span 7;
-      margin-bottom: 3em;
-      text-align: center;
-      animation-delay: 1.3s;
-      animation-duration: 400ms;
-      animation-name: fadeIn;
-      animation-fill-mode: forwards;
-      opacity: 0;
-   }
-   .contact-modal .contact-left form {
-      grid-row: 1/-1;
-      grid-column: 2/-1;
-      display: grid;
-      align-items: end;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-template-rows: repeat(12, minmax(0, 1fr));
-      animation-delay: 1.7s;
-      animation-duration: 350ms;
-      animation-name: fadeIn;
-      animation-fill-mode: forwards;
-      opacity: 0;
-   }
-   .contact-modal .contact-left form input {
-      width: 100%;
-      font-size: 1em;
-      font-weight: 300;
-      background: rgba(22, 22, 22, 0.95);
-      border: 1px solid rgba(112, 112, 112, 0.74);
-      padding: 0.5em;
-      color: white;
-   }
-   .contact-modal .contact-left form input:focus {
-      border: 1px solid rgba(219, 219, 219, 0.829);
-      outline: none;
-   }
-   .contact-modal .contact-left form .label-name {
-      grid-row: 2 / span 1;
-      grid-column: 2 / span 9;
-      margin-bottom: 0;
-   }
-   .contact-modal .contact-left form .label-email {
-      grid-row: 3 / span 2;
-      grid-column: 2 / span 9;
-      margin-bottom: 2em;
-   }
-   .contact-modal .contact-left form .label-message {
-      grid-row: 5 / span 4;
-      grid-column: 2 / span 9;
-      margin-top: 0;
-   }
-   .contact-modal .contact-left form .label-message textarea {
-      width: 100%;
-      height: 100%;
-      margin-top: 1em;
-      font-size: 1em;
-      resize: none;
-      padding: 0.8em;
-      padding-left: 1em;
-      background: rgba(22, 22, 22, 0.95);
-      border: 1px solid rgba(112, 112, 112, 0.74);
-   }
-   .contact-modal .contact-left form .label-message textarea:focus {
-      border: 1px solid rgba(219, 219, 219, 0.829);
-      outline: none;
-   }
-   .contact-modal .contact-left form .form-button {
-      grid-row: 10 / span 1;
-      grid-column: 3 / span 7;
-      font-weight: 400;
-      font-size: 1em;
-      padding: 0.8em 1.5em 0.8em 1.5em;
-      background: #30c9e8;
-      color: rgba(22, 22, 22, 0.95);
-      transition: all 180ms ease-in-out;
-   }
-   .contact-modal .contact-left form .form-button:hover {
-      border: 1px solid #30c9e8;
-      outline: none;
-      background: rgba(22, 22, 22, 0.95);
-      color: #30c9e8;
-      text-shadow: 1px 1px 4px rgba(22, 22, 22, 0.95);
-   }
-   .contact-modal .contact-right-wrapper {
-      position: fixed;
+   .contact-right-wrapper.is-open-right {
+      position: relative;
       top: 0;
-      height: 95vh;
+      right: 0;
       width: 100vw;
-      z-index: 50;
-      overflow: hidden;
-      transition: all ease-in-out 1s 100ms;
+      height: 70vh;
       background: white;
    }
-   .contact-modal .contact-right-wrapper .contact-right {
-      display: grid;
-   }
-   .contact-modal .contact-right-wrapper .contact-right .content-contact-right {
-      grid-column: 3 / span 9;
-      grid-row: 2/ -1;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h1 {
-      letter-spacing: 1px;
-      font-size: 1.6em;
-      margin-top: 0.2em;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h2 {
-      line-height: 1em;
-      margin-bottom: 50px;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h4 {
-      margin-bottom: 1.5em;
-      font-weight: 300;
-      color: #6b6b6b;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      p {
-      line-height: 1.2em;
-      font-size: 1em;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      ul {
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      ul
-      li {
-      display: inline-block;
-      margin-right: 10px;
-      margin-left: 10px;
-   }
-}
 
-@media (max-width: 320px) {
-   .contact-modal .contact-left {
+   .contact-left {
       display: grid;
-      height: 90vh;
-      width: 100%;
-      overflow: hidden;
-      position: absolute;
-      z-index: 100;
-      top: 85%;
-      transition: all ease-in-out 1s 100ms;
-   }
-   .contact-modal .contact-left h1 {
-      margin-bottom: 0;
-      grid-row: 1 / span 1;
-      grid-column: 4 / span 6;
-      letter-spacing: 1.5px;
-      text-align: center;
-      font-size: 1.5em;
-   }
-   .contact-modal .contact-left h3 {
-      grid-row: 2 / span 2;
-      grid-column: 3 / span 7;
-      margin-bottom: 3em;
-      text-align: center;
-      animation-delay: 1.3s;
-      animation-duration: 400ms;
-      animation-name: fadeIn;
-      animation-fill-mode: forwards;
-      opacity: 0;
-   }
-   .contact-modal .contact-left form {
-      grid-row: 1/-1;
-      grid-column: 2/-1;
-      display: grid;
+      justify-self: center;
       align-items: end;
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-rows: repeat(12, minmax(0, 1fr));
-      animation-delay: 1.7s;
-      animation-duration: 350ms;
-      animation-name: fadeIn;
-      animation-fill-mode: forwards;
-      opacity: 0;
+      left: -100%;
+      height: 100vh;
+      width: 50vw;
    }
-   .contact-modal .contact-left form input {
-      width: 100%;
-      font-size: 1em;
-      font-weight: 300;
-      background: rgba(22, 22, 22, 0.95);
-      border: 1px solid rgba(112, 112, 112, 0.74);
-      padding: 0.3em;
-      color: white;
-   }
-   .contact-modal .contact-left form input:focus {
-      border: 1px solid rgba(219, 219, 219, 0.829);
-      outline: none;
-   }
-   .contact-modal .contact-left form .label-name {
-      grid-row: 4 / span 1;
-      grid-column: 2 / span 9;
-      margin-bottom: 0;
-   }
-   .contact-modal .contact-left form .label-email {
-      grid-row: 4 / span 2;
-      grid-column: 2 / span 9;
-      margin-bottom: 0.5em;
-   }
-   .contact-modal .contact-left form .label-message {
-      grid-row: 6 / span 4;
-      grid-column: 2 / span 9;
-      margin-top: 0;
-   }
-   .contact-modal .contact-left form .label-message textarea {
-      width: 100%;
-      height: 100%;
-      margin-top: 1em;
-      font-size: 1em;
-      resize: none;
-      padding: 0.8em;
-      padding-left: 1em;
-      background: rgba(22, 22, 22, 0.95);
-      border: 1px solid rgba(112, 112, 112, 0.74);
-   }
-   .contact-modal .contact-left form .label-message textarea:focus {
-      border: 1px solid rgba(219, 219, 219, 0.829);
-      outline: none;
-   }
-   .contact-modal .contact-left form .form-button {
-      grid-row: 11 / span 1;
-      grid-column: 3 / span 7;
-      font-weight: 400;
-      font-size: 1em;
-      padding: 0.8em 1.5em 0.8em 1.5em;
-      background: #30c9e8;
-      color: rgba(22, 22, 22, 0.95);
-      transition: all 180ms ease-in-out;
-   }
-   .contact-modal .contact-left form .form-button:hover {
-      border: 1px solid #30c9e8;
-      outline: none;
-      background: rgba(22, 22, 22, 0.95);
-      color: #30c9e8;
-      text-shadow: 1px 1px 4px rgba(22, 22, 22, 0.95);
-   }
-   .contact-modal .contact-right-wrapper {
-      position: fixed;
-      top: 0;
-      height: 95vh;
+   .contact-left.is-open {
+      height: 100vh;
       width: 100vw;
-      z-index: 50;
-      overflow: hidden;
-      transition: all ease-in-out 1s 100ms;
-      background: white;
-   }
-   .contact-modal .contact-right-wrapper .contact-right {
-      display: grid;
-   }
-   .contact-modal .contact-right-wrapper .contact-right .content-contact-right {
-      grid-column: 3 / span 9;
-      grid-row: 2/ -1;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h1 {
-      letter-spacing: 1px;
-      font-size: 1.4em;
-      margin-top: 0.2em;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h2 {
-      line-height: 1em;
-      margin-bottom: 50px;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      h4 {
-      margin-bottom: 1.5em;
-      font-weight: 300;
-      color: #6b6b6b;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      p {
-      line-height: 1.2em;
-      font-size: 0.9em;
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      ul {
+      top: 70%;
+      left: 0;
+      padding-bottom: 5em;
       position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-   }
-   .contact-modal
-      .contact-right-wrapper
-      .contact-right
-      .content-contact-right
-      ul
-      li {
-      display: inline-block;
-      margin-right: 10px;
-      margin-left: 10px;
    }
 }
