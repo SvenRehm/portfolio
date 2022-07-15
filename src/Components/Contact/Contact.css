@@ -361,14 +361,6 @@
    }
 }
 
-@media only screen and (max-width: 1500px) {
-}
-@media only screen and (max-width: 1200px) {
-}
-
-@media only screen and (max-width: 910px) {
-}
-
 @media only screen and (max-width: 860px) {
    .contact-right-wrapper .contact-right .content-contact-right {
       grid-column: 3 / span 7;
