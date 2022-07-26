@@ -114,10 +114,86 @@ button:hover {
    transform: rotate(-45deg) translateY(0em) translateX(0em);
 }
 
-.react-select-container {
+.switch {
    position: fixed;
-   right: 7%;
+   right: 6%;
+   display: inline-block;
+   margin: 0 5px;
+}
+
+.switch > span {
+   font-family: "Montserrat", sans-serif;
+   position: absolute;
+   top: 14px;
+   pointer-events: none;
+
+   font-weight: bold;
+   font-size: 14px;
+   text-transform: uppercase;
+   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+   width: 50%;
+   text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+   color: #000000;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+   color: rgb(156, 156, 156);
+}
+
+.switch > span.on {
+   left: 0;
+   padding-left: 2px;
+   color: #000000;
+}
+
+.switch > span.off {
+   right: 0;
+   padding-right: 4px;
+   color: rgb(156, 156, 156);
+}
+
+.check-toggle {
+   position: absolute;
+   margin-left: -9999px;
+   visibility: hidden;
+}
+.check-toggle + label {
+   display: block;
+   position: relative;
    cursor: pointer;
+   outline: none;
+   user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+   padding: 2px;
+   width: 100px;
+   height: 40px;
+}
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
+   display: block;
+   position: absolute;
+   content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+   top: 2px;
+   left: 2px;
+   bottom: 2px;
+   right: 2px;
+}
+
+span.seporator {
+   content: "";
+   border-right: 2px solid #000000;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+   margin-left: 44px;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -133,8 +209,8 @@ button:hover {
    .header .header-container {
       padding: 0 80px;
    }
-   .react-select-container {
-      right: 9%;
+   .switch {
+      right: 8%;
    }
    .uparrow {
       right: 4%;
@@ -146,8 +222,8 @@ button:hover {
    .header .header-container {
       padding: 0 40px;
    }
-   .react-select-container {
-      right: 10%;
+   .switch {
+      right: 8%;
    }
 }
 
@@ -155,7 +231,9 @@ button:hover {
    .header .header-container {
       padding: 0 40px;
    }
-
+   .switch {
+      right: 8%;
+   }
    .uparrow {
       right: 4%;
       bottom: 15px;

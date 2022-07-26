@@ -8,21 +8,18 @@ export const Landing = ({
    toggleContact,
    arrowhide,
    goToPage,
+   languageEN,
 }) => {
    return (
-      <div
-         // className="landing"
-         className={menu || contact ? "fadeout-landing landing" : "landing"}
-      >
+      <div className={menu || contact ? "fadeout-landing landing" : "landing"}>
          <div className="fullwidth-wrapper">
-            {/* <div className="background-dark" />
-            <div className="background-light" /> */}
             <img className="heroimg" src={img} alt="heroimg"></img>
             <div className="landing-headings">
                <h1>Sven Rehm</h1>
                <h3>
-                  I am a Germany based Frontend Web Developer with a passion for
-                  building clean and user friendly experiences
+                  {languageEN
+                     ? "I am a Germany based Frontend Web Developer with a passion for building clean and user friendly experiences"
+                     : "Ich bin ein Frontend-Webentwickler mit einer Leidenschaft für die Erstellung von sauberen und benutzerfreundlichen Webseiten."}
                </h3>
 
                <a
@@ -33,7 +30,7 @@ export const Landing = ({
                      goToPage(1)
                   }}
                >
-                  My Work
+                  {languageEN ? "My Work" : "Portfolio"}
                </a>
                <a
                   className="btn btn-about-me"
@@ -42,7 +39,7 @@ export const Landing = ({
                      toggleContact()
                   }}
                >
-                  contact
+                  {languageEN ? "contact" : "Kontakt"}
                </a>
             </div>
 

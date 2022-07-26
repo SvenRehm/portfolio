@@ -29,14 +29,13 @@ export class App extends Component {
          menu: false,
          contact: false,
          arrowhide: false,
-         languageEN: true,
+         languageEN: false,
          activePage: 0,
       }
    }
 
    toggleLanguage = () => {
       const currentState = this.state.languageEN
-
       this.setState({ languageEN: !currentState })
    }
    toggleMenu = () => {
@@ -80,8 +79,9 @@ export class App extends Component {
 
       const language = this.state.languageEN ? firstSectionEN : firstSection
       const language2 = this.state.languageEN ? secondSectionEN : secondSection
-
       const language3 = this.state.languageEN ? thirdSectionEN : thirdSection
+
+      console.log(this.state.languageEN)
       return (
          <div className={this.state.contact ? "#scroll blur" : "#scroll"}>
             <div className="bg-lines hidden">
@@ -94,7 +94,6 @@ export class App extends Component {
                menu={this.state.menu}
                toggleMenu={this.toggleMenu}
                toggleLanguage={this.toggleLanguage}
-               onChangeLanguage={this.onChangeLanguage}
                arrowhide={this.state.arrowhide}
                goToPage={this.goToPage}
                language={this.state.languageEN}
@@ -104,6 +103,7 @@ export class App extends Component {
                toggleContact={this.toggleContact}
                closeMenu={this.closeMenu}
                goToPage={this.goToPage}
+               language={this.state.languageEN}
             />
             <Contact
                language={this.state.languageEN}
@@ -116,6 +116,7 @@ export class App extends Component {
                ref={(c) => (this.reactPageScroller = c)}
             >
                <Landing
+                  languageEN={this.state.languageEN}
                   menu={this.state.menu}
                   toggleContact={this.toggleContact}
                   changePage={this.changePage}

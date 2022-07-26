@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import "./Contact.css"
 import closeButton from "../../images/close-button.svg"
 import ContactForm from "../ContactForm"
@@ -7,8 +7,8 @@ export const Contact = ({ contact, closeContact, language }) => {
    return (
       <div className="contact-modal">
          <div className={contact ? "contact-left is-open" : "contact-left"}>
-            <h1>Contact Me</h1>
-            <h3>Let’s make something special.</h3>
+            <h1>{language ? "Contact Me" : "Kontakt aufnehmen"}</h1>
+            {/* <h3>Let’s make something special.</h3> */}
             <ContactForm />
          </div>
          <div
@@ -57,16 +57,19 @@ export const Contact = ({ contact, closeContact, language }) => {
                         </p>
                      </>
                   ) : (
-                     <p>
-                        Hallo, ich bin ein Front-End-Entwickler. Ich habe echte
-                        Leidenschaft für Front-End-Entwickler und der
-                        Problemlösungsaspekt. Mein aktuelles Ziel ist es neue
-                        Technologien und Fähigkeiten zu erlernen, damit ich in
-                        Zukunft um in Zukunft größere und anspruchsvollere
-                        Projekte durchführen zu können. In meiner Freizeit
-                        trainiere ich, spiele Spiele und schaue Fernsehserien
-                        wie House of Cards und Vikings.
-                     </p>
+                     <>
+                        <p>
+                           Hallo, ich bin ein Front-End-Entwickler. Ich habe
+                           echte Leidenschaft für Front-End-Entwickler und der
+                           Problemlösungsaspekt.
+                        </p>
+                        <p>
+                           Mein aktuelles Ziel ist es neue Technologien und
+                           Fähigkeiten zu erlernen, damit ich in Zukunft um in
+                           Zukunft größere und anspruchsvollere Projekte
+                           durchführen zu können.
+                        </p>
+                     </>
                   )}
 
                   <ul>

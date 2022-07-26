@@ -1,7 +1,13 @@
 import React from "react"
 import "./Menu.css"
 
-export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
+export const Menu = ({
+   menu,
+   toggleContact,
+   closeMenu,
+   goToPage,
+   language,
+}) => {
    return (
       <div className={menu ? "menu-overlay closed" : "menu-overlay"}>
          <div className="menu-all">
@@ -10,7 +16,7 @@ export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
                   <a
                      href="/"
                      className="vs-anchor"
-                     onClick={event => {
+                     onClick={(event) => {
                         closeMenu()
                         event.preventDefault()
                         goToPage(0)
@@ -23,7 +29,7 @@ export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
                   <a
                      href="/"
                      className="vs-anchor"
-                     onClick={event => {
+                     onClick={(event) => {
                         event.preventDefault()
                         closeMenu()
                         goToPage(1)
@@ -32,27 +38,16 @@ export const Menu = ({ menu, toggleContact, closeMenu, goToPage }) => {
                      Portfolio
                   </a>
                </li>
-               {/* <li className="menu-item-5">
-                  <a
-                     href="#skills"
-                     className="vs-anchor"
-                     onClick={() => {
-                        closeMenu()
-                        goToPage(3)
-                     }}
-                  >
-                     Skills
-                  </a>
-               </li> */}
+
                <li className="menu-item-4">
                   <a
                      href="/"
-                     onClick={event => {
+                     onClick={(event) => {
                         event.preventDefault()
                         toggleContact()
                      }}
                   >
-                     Contact | About
+                     {language ? " Contact | About" : " Kontakt | über mich"}
                   </a>
                </li>
             </ul>

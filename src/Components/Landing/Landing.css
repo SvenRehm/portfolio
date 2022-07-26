@@ -250,6 +250,15 @@
       grid-column: 7 / 12;
       grid-row: 4;
    }
+   .landing .btn {
+      margin: 2em 0 0 2em;
+      display: block;
+      width: 150px;
+      text-align: center;
+   }
+   .landing .btn.btn-about-me {
+      margin-left: 2em;
+   }
 }
 
 @media only screen and (max-width: 820px) {
@@ -275,7 +284,6 @@
       margin: 3em 0 0 2em;
       display: block;
       width: 150px;
-      /* margin: 0 auto; */
       text-align: center;
    }
    .landing .btn.btn-about-me {
