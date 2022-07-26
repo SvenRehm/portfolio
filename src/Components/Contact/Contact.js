@@ -1,72 +1,17 @@
 import React, { useState } from "react"
 import "./Contact.css"
 import closeButton from "../../images/close-button.svg"
-
-const FORM_ENDPOINT =
-   "https://public.herotofu.com/v1/d63d9060-02d2-11ed-bc36-e1ea9ccadd33"
+import ContactForm from "../ContactForm"
 
 export const Contact = ({ contact, closeContact, language }) => {
-   const [submitted, setSubmitted] = useState(false)
-   const handleSubmit = () => {
-      setTimeout(() => {
-         setSubmitted(true)
-      }, 100)
-   }
-
-   if (submitted) {
-      return (
-         <>
-            <div className="text-2xl">Thank you!</div>
-            <div className="text-md">We'll be in touch soon.</div>
-         </>
-      )
-   }
    return (
       <div className="contact-modal">
-         <div
-            // className="contact-left"
-            className={contact ? "contact-left is-open" : "contact-left"}
-         >
+         <div className={contact ? "contact-left is-open" : "contact-left"}>
             <h1>Contact Me</h1>
-            {/* <h3>Internship proposal, freelance inquiry or ...</h3> */}
             <h3>Let’s make something special.</h3>
-            <form
-               action={FORM_ENDPOINT}
-               onSubmit={handleSubmit}
-               method="POST"
-               target="_blank"
-               // method="post"
-               // className="form"
-               // action="https://formspree.io/f/rehm21@web.de"
-               // method="POST"
-            >
-               <div className="label-name">
-                  <input placeholder="Name" type="text" name="name"></input>
-               </div>
-
-               <div className="label-email">
-                  <input
-                     placeholder="Email"
-                     id="email"
-                     type="email"
-                     name="email"
-                     required
-                  ></input>
-               </div>
-               <div className="label-message">
-                  <textarea
-                     placeholder="Write a message..."
-                     name="message"
-                     id="message"
-                  ></textarea>
-               </div>
-               <button className="form-button" type="submit">
-                  Submit
-               </button>
-            </form>
+            <ContactForm />
          </div>
          <div
-            //  className="contact-right-wrapper"
             className={
                contact
                   ? "contact-right-wrapper is-open-right"
@@ -98,14 +43,19 @@ export const Contact = ({ contact, closeContact, language }) => {
 
                   <h1>About Me</h1>
                   {language ? (
-                     <p>
-                        Hello I’m a Front-End Developer. <br />I have genuine
-                        passion in
-                        <b> Front-End Developepment</b> and the
-                        <b>problem solving</b> aspect of it. My current goal is
-                        to learn new technologies and skills so that I can build
-                        bigger and more ambitious projects in the future.
-                     </p>
+                     <>
+                        <p>
+                           Hello I’m a Front-End Developer. <br />I have genuine
+                           passion in
+                           <b> Front-End Developepment</b> and the
+                           <b> problem solving</b> aspect of it. <br />
+                        </p>
+                        <p>
+                           My current goal is to learn new technologies and
+                           skills so that I can build bigger and more ambitious
+                           projects in the future.
+                        </p>
+                     </>
                   ) : (
                      <p>
                         Hallo, ich bin ein Front-End-Entwickler. Ich habe echte

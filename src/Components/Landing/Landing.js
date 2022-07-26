@@ -21,11 +21,8 @@ export const Landing = ({
             <div className="landing-headings">
                <h1>Sven Rehm</h1>
                <h3>
-                  {/* I'm a Germany based web designer & frontend web developer with
-                  focus on designing clean and user friedly experiences */}
                   I am a Germany based Frontend Web Developer with a passion for
-                  building clean and <br />
-                  user friendly experiences
+                  building clean and user friendly experiences
                </h3>
 
                <a
@@ -45,30 +42,10 @@ export const Landing = ({
                      toggleContact()
                   }}
                >
-                  About me
+                  contact
                </a>
             </div>
-            {/* <div className="call-to-action"> */}
-            {/* <a
-               className="btn btn-portfolio vs-anchor"
-               href="/"
-               onClick={event => {
-                  event.preventDefault()
-                  goToPage(1)
-               }}
-            >
-               My Work
-            </a> */}
 
-            {/* <a
-               className="btn btn-about-me"
-               href="#aboutme"
-               onClick={() => {
-                  toggleContact()
-               }}
-            >
-               About me
-            </a> */}
             <a
                className="landing-down-arrow vs-anchor"
                href="/"

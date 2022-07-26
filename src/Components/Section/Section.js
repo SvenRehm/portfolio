@@ -53,23 +53,23 @@ export class Sections extends Component {
                         <h3 className="desctiption-link">{description}</h3>
 
                         <ul className="projectBulllets">{projectBulllets}</ul>
-                     </div>
-                     <div className="viewbuttons">
-                        <a
-                           onClick={() => window.open(demolink, "_blank")}
-                           className="viewdemo"
-                           href={demolink}
-                        >
-                           View Demo
-                        </a>
+                        <div className="viewbuttons">
+                           <a
+                              onClick={() => window.open(demolink, "_blank")}
+                              className="viewdemo"
+                              href={demolink}
+                           >
+                              View Demo
+                           </a>
 
-                        <a
-                           className="viewcode"
-                           href={codelink}
-                           onClick={() => window.open(codelink, "_blank")}
-                        >
-                           View Code
-                        </a>
+                           <a
+                              className="viewcode"
+                              href={codelink}
+                              onClick={() => window.open(codelink, "_blank")}
+                           >
+                              View Code
+                           </a>
+                        </div>
                      </div>
                   </div>
                </div>

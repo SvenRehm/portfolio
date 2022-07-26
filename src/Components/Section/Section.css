@@ -28,6 +28,7 @@
    position: absolute;
    top: 30px;
    left: 40%;
+   height: 100%;
    z-index: 6;
    text-align: center;
    animation-name: imgSlideUponload;
@@ -75,8 +76,6 @@
 }
 .grid .img-card {
    justify-content: center;
-   /* grid-column: 3 / span 8;
-   grid-row: 4 / span 7; */
    grid-column: 3 / span 8;
    grid-row: 3 / span 8;
    width: 100%;
@@ -93,51 +92,50 @@
 
 .grid .viewbuttons {
    position: absolute;
-   /* bottom: 2.5em; */
-   left: 38%;
-   /* width: 100%; */
-   bottom: 0;
-   /* left: 0; */
+   left: 50%;
+   transform: translate(-50%, 0);
+   bottom: 5em;
    z-index: 7;
-   /* height: 60px; */
    width: 500px;
-   /* background-color: rgba(0, 0, 0, 0.507); */
-   padding: 3em 0;
 }
 .grid .viewdemo {
    text-decoration: none;
-   color: white;
    z-index: 7;
-   font-weight: 600;
-   padding: 0.3em 0.7em 0.3em 0.7em;
-   margin: 0 0 0 2em;
-   font-size: 1.2em;
+   transition: all 150ms ease-in-out;
+   font-weight: 400;
+   font-size: 1.1em;
    text-transform: uppercase;
-   transition: all 250ms ease-in-out;
+   padding: 0.6em 1.5em;
+   background-color: white;
+   color: black;
+   border: 1px solid white;
 }
 .grid a {
    text-decoration: none;
    color: rgba(22, 22, 22, 0.95);
 }
 .grid a:hover {
-   color: #c0a426;
+   border: 1px solid white;
+   background-color: black;
+   color: white;
 }
 
 .grid .viewcode {
-   margin-left: 1.5em;
-
+   border: 1px solid white;
+   margin-left: 3em;
    text-decoration: none;
-   color: white;
    z-index: 7;
-   font-weight: 600;
-   padding: 0.3em 0.7em 0.3em 0.7em;
-   font-size: 1.2em;
+   font-weight: 400;
+   font-size: 1.1em;
+   padding: 0.6em 1.5em;
+   background-color: white;
+
    text-transform: uppercase;
-   transition: all 250ms ease-in-out;
+   transition: all 150ms ease-in-out;
 }
 
 .grid .viewcode:hover {
-   color: #c0a426;
+   color: white;
    /* border: 1px solid #c0a426; */
 }
 
@@ -280,9 +278,7 @@
    .grid .img-card-text h3.desctiption-link {
       margin-top: 1.2em;
       margin-bottom: 2em;
-
       font-size: 1.1em;
-
       width: 500px;
    }
    .grid .projectBulllets {
@@ -291,9 +287,9 @@
       font-size: 1.1em;
    }
    .grid .viewbuttons {
-      left: 37%;
+      /* left: 37%;
       width: 500px;
-      padding: 3em 0;
+      padding: 3em 0; */
    }
 }
 
@@ -309,10 +305,10 @@
       width: 400px;
       font-size: 1em;
    }
-   .grid .viewbuttons {
+   /* .grid .viewbuttons {
       width: 400px;
       padding: 3em 0;
-   }
+   } */
 }
 
 @media only screen and (max-width: 830px) {
@@ -331,12 +327,12 @@
       width: 350px;
       font-size: 1em;
    }
-   .grid .viewbuttons {
+   /* .grid .viewbuttons {
       position: absolute;
       width: 350px;
       padding: 3em 0;
       left: 35%;
-   }
+   } */
 
    .grid .viewcode {
       margin-left: 1.1em;
@@ -373,21 +369,10 @@
       font-size: 0.9em;
    }
    .grid .viewbuttons {
-      position: absolute;
+      font-size: 0.8em;
       width: 350px;
-      padding: 3em 0;
-      left: 30px;
    }
 
-   .grid .viewcode {
-      margin-left: 1.1em;
-      font-size: 1.1em;
-   }
-
-   .grid .viewdemo {
-      margin-left: 0;
-      font-size: 1.1em;
-   }
    .grid .skills li {
       display: inline-block;
       font-size: 0.9em;
