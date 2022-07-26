@@ -142,17 +142,18 @@
    width: 160px;
    text-transform: uppercase;
    padding: 0.7em;
-   background: #c0a426;
+   /* background: #c0a426; */
+   background-color: white;
    color: rgba(22, 22, 22, 0.95);
    border: 1px solid rgba(22, 22, 22, 0.95);
    transition: all 180ms ease-in-out;
 }
 .contact-left form .form-button:hover {
-   border: 1px solid #c0a426;
+   border: 1px solid white;
    outline: none;
    background: rgba(22, 22, 22, 0.95);
    cursor: pointer;
-   color: #c0a426;
+   color: white;
    text-shadow: 1px 1px 4px rgba(22, 22, 22, 0.95);
 }
 
